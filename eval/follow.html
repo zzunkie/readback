@@ -1,0 +1,51 @@
+<!doctype html><meta charset="utf-8"><title>Readback: following evaluation</title>
+<pre id="o">running…</pre>
+<script type="module">
+// Plays the 86 test slides as a shared screen (presenter tile moving, cursor moving, one cursor-only
+// distraction between slides) and measures what the app's own watcher and reader do with it.
+// ?where=cloud reads every screen with the cloud model instead, for comparison. ?n=20 limits the slides.
+import { watch } from '/src/watch.js';
+import { readHeadWithFallback, warmUp } from '/src/models.js';
+const P = new URLSearchParams(location.search); const where = P.get('where') || 'device';
+const slides = (await (await fetch('/eval/slides.json')).json()).slice(0, +(P.get('n') || 999));
+const img = (id) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.src = `/eval/${id}.jpg`; });
+const images = []; for (const s of slides) images.push(await img(s.id));
+if (where === 'device') await warmUp();
+const canvas = document.createElement('canvas'); canvas.width = 1280; canvas.height = 720; const ctx = canvas.getContext('2d');
+let seed = 5; const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
+let idx = -1, shownAt = 0, cursor = [300, 300], target = [300, 300];
+const draw = () => {
+  if (idx >= 0) ctx.drawImage(images[idx], 0, 0);
+  const t = performance.now() / 1000;
+  ctx.fillStyle = '#111827'; ctx.fillRect(1090, 20, 170, 112); ctx.fillStyle = '#9ca3af'; ctx.beginPath(); ctx.arc(1175, 64, 26, 0, 7); ctx.fill();
+  for (let k = 0; k < 9; k += 1) { ctx.fillStyle = '#34d399'; const h = 6 + Math.abs(Math.sin(t * 7 + k * 1.3)) * 18; ctx.fillRect(1118 + k * 13, 124 - h, 8, h); }
+  cursor = [cursor[0] + (target[0] - cursor[0]) * 0.2, cursor[1] + (target[1] - cursor[1]) * 0.2];
+  ctx.fillStyle = '#000'; ctx.beginPath(); ctx.moveTo(cursor[0], cursor[1]); ctx.lineTo(cursor[0] + 12, cursor[1] + 16); ctx.lineTo(cursor[0], cursor[1] + 20); ctx.fill();
+};
+setInterval(draw, 100);
+const video = document.createElement('video'); video.muted = true; video.srcObject = canvas.captureStream(10); await video.play();
+const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+const rows = slides.map((s) => ({ id: s.id, kind: s.kind, title: s.title, events: [] })); let falseEvents = 0, bytes = 0, turn = 0, fellBack = 0;
+const stop = watch(video, { onChange: async ({ kind, frame }) => {
+  const at = idx, since = performance.now() - shownAt, mine = ++turn;
+  if (at < 0) return;
+  const row = rows[at]; const ev = { kind, detectMs: Math.round(since) }; row.events.push(ev);
+  if (row.events.length > 1) { falseEvents += 1; return; }   // a second event on the same slide is a false alarm
+  try { const head = await readHeadWithFallback(frame.base64, where); if (head.fellBack) { fellBack += 1; bytes += frame.bytes; } ev.readMs = Math.round(performance.now() - shownAt); ev.title = head.title; ev.kindRead = head.kind; ev.late = mine !== turn || idx !== at; if (where === 'cloud') bytes += frame.bytes; } catch (e) { ev.error = e.message; }
+} });
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+for (let i = 0; i < slides.length; i += 1) {
+  idx = i; shownAt = performance.now(); document.getElementById('o').textContent = `slide ${i + 1} of ${slides.length}`;
+  await sleep(3500 + rnd() * 1500);
+  target = [200 + rnd() * 800, 200 + rnd() * 400];      // the presenter points at something: not a new screen
+  await sleep(3000 + rnd() * 1500);
+}
+await sleep(4000); stop();
+const first = rows.map((r) => r.events[0]); const read = first.filter((e) => e && e.title !== undefined);
+const med = (a) => { const s = [...a].sort((x, y) => x - y); return s.length ? s[Math.floor(s.length / 2)] : null; }; const p90 = (a) => { const s = [...a].sort((x, y) => x - y); return s.length ? s[Math.floor(s.length * 0.9)] : null; };
+const summary = { where, slides: rows.length, announced: read.length, missed: rows.filter((r) => !r.events.length).length, falseAnnouncements: falseEvents,
+  titleRight: rows.filter((r) => r.events[0] && norm(r.events[0].title) === norm(r.title)).length,
+  detectMs: { median: med(read.map((e) => e.detectMs)), p90: p90(read.map((e) => e.detectMs)) }, announceMs: { median: med(read.map((e) => e.readMs)), p90: p90(read.map((e) => e.readMs)) },
+  readInCloudAfterStall: fellBack, uploadedMB: +(bytes / 1048576).toFixed(1) };
+window.__eval = { summary, rows }; document.getElementById('o').textContent = JSON.stringify(summary, null, 1);
+</script>

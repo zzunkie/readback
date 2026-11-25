@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Team sync (demo call)</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#202124;color:#e8eaed;font:15px system-ui,-apple-system,sans-serif;height:100vh;display:grid;grid-template-rows:1fr 64px;overflow:hidden}
+.stage{display:grid;grid-template-columns:1fr 200px;gap:12px;padding:12px;min-height:0}
+.share{background:#000;border-radius:10px;display:grid;place-items:center;min-width:0;min-height:0;position:relative}
+.share img{max-width:100%;max-height:100%;display:block}
+.share .who{position:absolute;left:12px;bottom:10px;background:rgba(32,33,36,.85);padding:4px 10px;border-radius:6px;font-size:13px}
+.people{display:grid;gap:10px;align-content:start}
+.tile{background:#3c4043;border-radius:10px;height:112px;display:grid;place-items:center;position:relative}
+.tile i{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:600;font-size:20px;color:#fff}
+.tile span{position:absolute;left:8px;bottom:6px;font-size:12px}
+.tile.talk{outline:3px solid #8ab4f8}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:0 18px;background:#202124}
+.bar .mid{display:flex;gap:10px}.bar b{width:44px;height:44px;border-radius:50%;background:#3c4043;display:block}.bar b.end{background:#ea4335;width:60px;border-radius:22px}
+</style></head><body>
+<div class="stage"><div class="share"><img id="slide" src="/sample/s1.jpg" alt=""><div class="who">Dana Reyes is presenting</div></div>
+<div class="people"><div class="tile talk"><i style="background:#1a73e8">D</i><span>Dana Reyes</span></div><div class="tile"><i style="background:#e37400">M</i><span>Marcus Lee</span></div><div class="tile"><i style="background:#188038">P</i><span>Priya Nair</span></div><div class="tile"><i style="background:#a142f4">Y</i><span>You</span></div></div></div>
+<div class="bar"><span>Team sync · demo call</span><div class="mid"><b></b><b></b><b></b><b class="end"></b></div><span id="clock"></span></div>
+<script>
+// A stand-in for a meeting tab: one participant shares slides. This page has no model and no
+// connection to Readback; it only shows pictures. ?step=14 sets the seconds per slide; the right
+// and left arrow keys move by hand. window.__show(n) jumps to slide n.
+const files = ['s1', 's2a', 's2', 's3', 's4', 's5', 's6', 's7', 's8']; const n = files.length; let i = 1; const img = document.getElementById('slide');
+window.__show = (k) => { i = Math.max(1, Math.min(n, k)); img.src = `/sample/${files[i - 1]}.jpg`; };
+addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') __show(i + 1); if (e.key === 'ArrowLeft') __show(i - 1); });
+const step = +new URLSearchParams(location.search).get('step'); if (step) setInterval(() => { if (i < n) __show(i + 1); }, step * 1000);
+setInterval(() => { document.getElementById('clock').textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); }, 1000);
+</script></body></html>

@@ -1,0 +1,1285 @@
+[
+ {
+  "id": "s01",
+  "kind": "bullets",
+  "title": "Q3 revenue by region",
+  "questions": []
+ },
+ {
+  "id": "s02",
+  "kind": "bullets",
+  "title": "Hiring plan for 2027",
+  "questions": []
+ },
+ {
+  "id": "s03",
+  "kind": "bullets",
+  "title": "Why checkout conversion dropped",
+  "questions": []
+ },
+ {
+  "id": "s04",
+  "kind": "bullets",
+  "title": "Migration timeline",
+  "questions": []
+ },
+ {
+  "id": "s05",
+  "kind": "bullets",
+  "title": "Customer support backlog",
+  "questions": []
+ },
+ {
+  "id": "s06",
+  "kind": "bullets",
+  "title": "Course overview: Statistics 201",
+  "questions": []
+ },
+ {
+  "id": "s07",
+  "kind": "bullets",
+  "title": "Security review findings",
+  "questions": []
+ },
+ {
+  "id": "s08",
+  "kind": "bullets",
+  "title": "Marketing budget reallocation",
+  "questions": []
+ },
+ {
+  "id": "s09",
+  "kind": "bullets",
+  "title": "Onboarding redesign goals",
+  "questions": []
+ },
+ {
+  "id": "s10",
+  "kind": "bullets",
+  "title": "Supply chain risks",
+  "questions": []
+ },
+ {
+  "id": "s11",
+  "kind": "bullets",
+  "title": "Lecture 8: Photosynthesis",
+  "questions": []
+ },
+ {
+  "id": "s12",
+  "kind": "bullets",
+  "title": "Roadmap priorities",
+  "questions": []
+ },
+ {
+  "id": "s13",
+  "kind": "bullets",
+  "title": "Incident review: November 12 outage",
+  "questions": []
+ },
+ {
+  "id": "s14",
+  "kind": "bullets",
+  "title": "Team survey results",
+  "questions": []
+ },
+ {
+  "id": "s15",
+  "kind": "bullets",
+  "title": "Pricing experiment",
+  "questions": []
+ },
+ {
+  "id": "s16",
+  "kind": "bullets",
+  "title": "Accessibility audit summary",
+  "questions": []
+ },
+ {
+  "id": "s17",
+  "kind": "bullets",
+  "title": "Research methods",
+  "questions": []
+ },
+ {
+  "id": "s18",
+  "kind": "bullets",
+  "title": "Next steps",
+  "questions": []
+ },
+ {
+  "id": "s19",
+  "kind": "bullets",
+  "title": "Energy use by building",
+  "questions": []
+ },
+ {
+  "id": "s20",
+  "kind": "bullets",
+  "title": "Launch checklist",
+  "questions": []
+ },
+ {
+  "id": "s21",
+  "kind": "table",
+  "title": "Revenue by region, in millions of dollars",
+  "questions": [
+   {
+    "q": "What is the value for North America in Q3?",
+    "a": "53.8"
+   },
+   {
+    "q": "What is the value for Latin America in Q4?",
+    "a": "7.7"
+   },
+   {
+    "q": "What is the value for Asia Pacific in Q1?",
+    "a": "11.7"
+   }
+  ]
+ },
+ {
+  "id": "s22",
+  "kind": "table",
+  "title": "Support tickets by category",
+  "questions": [
+   {
+    "q": "What is the value for Billing in Q3?",
+    "a": "243"
+   },
+   {
+    "q": "What is the value for Login in Q2?",
+    "a": "782"
+   },
+   {
+    "q": "What is the value for Refunds in Q2?",
+    "a": "728"
+   }
+  ]
+ },
+ {
+  "id": "s23",
+  "kind": "table",
+  "title": "Headcount by department",
+  "questions": [
+   {
+    "q": "What is the value for Support in Q3?",
+    "a": "705"
+   },
+   {
+    "q": "What is the value for Sales in Q2?",
+    "a": "433"
+   },
+   {
+    "q": "What is the value for Sales in Q1?",
+    "a": "576"
+   }
+  ]
+ },
+ {
+  "id": "s24",
+  "kind": "table",
+  "title": "Monthly active users by plan",
+  "questions": [
+   {
+    "q": "What is the value for Starter in Q4?",
+    "a": "27.4"
+   },
+   {
+    "q": "What is the value for Enterprise in Q2?",
+    "a": "22.3"
+   },
+   {
+    "q": "What is the value for Starter in Q3?",
+    "a": "88.9"
+   }
+  ]
+ },
+ {
+  "id": "s25",
+  "kind": "table",
+  "title": "Exam scores by section",
+  "questions": [
+   {
+    "q": "What is the value for North America in Q2?",
+    "a": "323"
+   },
+   {
+    "q": "What is the value for North America in Q4?",
+    "a": "314"
+   },
+   {
+    "q": "What is the value for Europe in Q3?",
+    "a": "848"
+   }
+  ]
+ },
+ {
+  "id": "s26",
+  "kind": "table",
+  "title": "Energy use in megawatt hours",
+  "questions": [
+   {
+    "q": "What is the value for Refunds in Q2?",
+    "a": "883"
+   },
+   {
+    "q": "What is the value for Login in Q3?",
+    "a": "505"
+   },
+   {
+    "q": "What is the value for Refunds in Q4?",
+    "a": "585"
+   }
+  ]
+ },
+ {
+  "id": "s27",
+  "kind": "table",
+  "title": "Conversion rate by channel, percent",
+  "questions": [
+   {
+    "q": "What is the value for Support in Q1?",
+    "a": "54.7"
+   },
+   {
+    "q": "What is the value for Operations in Q2?",
+    "a": "87.6"
+   },
+   {
+    "q": "What is the value for Sales in Q3?",
+    "a": "78.4"
+   }
+  ]
+ },
+ {
+  "id": "s28",
+  "kind": "table",
+  "title": "Shipping delays by carrier, in days",
+  "questions": [
+   {
+    "q": "What is the value for Team in Q1?",
+    "a": "464"
+   },
+   {
+    "q": "What is the value for Enterprise in Q2?",
+    "a": "206"
+   },
+   {
+    "q": "What is the value for Starter in Q4?",
+    "a": "898"
+   }
+  ]
+ },
+ {
+  "id": "s29",
+  "kind": "table",
+  "title": "Budget versus actual, in thousands",
+  "questions": [
+   {
+    "q": "What is the value for North America in Q3?",
+    "a": "869"
+   },
+   {
+    "q": "What is the value for Asia Pacific in Q2?",
+    "a": "580"
+   },
+   {
+    "q": "What is the value for Asia Pacific in Q1?",
+    "a": "749"
+   }
+  ]
+ },
+ {
+  "id": "s30",
+  "kind": "table",
+  "title": "Bug counts by severity",
+  "questions": [
+   {
+    "q": "What is the value for Login in Q1?",
+    "a": "28.3"
+   },
+   {
+    "q": "What is the value for Billing in Q2?",
+    "a": "14.8"
+   },
+   {
+    "q": "What is the value for Login in Q3?",
+    "a": "67.1"
+   }
+  ]
+ },
+ {
+  "id": "s31",
+  "kind": "table",
+  "title": "Survey responses by office",
+  "questions": [
+   {
+    "q": "What is the value for Support in Q3?",
+    "a": "729"
+   },
+   {
+    "q": "What is the value for Operations in Q3?",
+    "a": "258"
+   },
+   {
+    "q": "What is the value for Operations in Q3?",
+    "a": "258"
+   }
+  ]
+ },
+ {
+  "id": "s32",
+  "kind": "table",
+  "title": "Inventory by warehouse",
+  "questions": [
+   {
+    "q": "What is the value for Team in Q1?",
+    "a": "851"
+   },
+   {
+    "q": "What is the value for Team in Q1?",
+    "a": "851"
+   },
+   {
+    "q": "What is the value for Team in Q1?",
+    "a": "851"
+   }
+  ]
+ },
+ {
+  "id": "s33",
+  "kind": "chart",
+  "title": "Weekly sign-ups",
+  "questions": [
+   {
+    "q": "Which bar is the highest?",
+    "a": "Mon"
+   },
+   {
+    "q": "Which bar is the lowest?",
+    "a": "Tue"
+   },
+   {
+    "q": "What is the value for Wed?",
+    "a": "427"
+   }
+  ]
+ },
+ {
+  "id": "s34",
+  "kind": "chart",
+  "title": "Average response time in hours",
+  "questions": [
+   {
+    "q": "Which bar is the highest?",
+    "a": "Gamma"
+   },
+   {
+    "q": "Which bar is the lowest?",
+    "a": "Delta"
+   }
+  ]
+ },
+ {
+  "id": "s35",
+  "kind": "chart",
+  "title": "Units sold by product line",
+  "questions": [
+   {
+    "q": "Which bar is the highest?",
+    "a": "2026"
+   },
+   {
+    "q": "Which bar is the lowest?",
+    "a": "2022"
+   },
+   {
+    "q": "What is the value for 2024?",
+    "a": "395"
+   }
+  ]
+ },
+ {
+  "id": "s36",
+  "kind": "chart",
+  "title": "Page load time in seconds by release",
+  "questions": [
+   {
+    "q": "Which bar is the highest?",
+    "a": "v1.1"
+   },
+   {
+    "q": "Which bar is the lowest?",
+    "a": "v2.1"
+   }
+  ]
+ },
+ {
+  "id": "s37",
+  "kind": "chart",
+  "title": "Students enrolled by year",
+  "questions": [
+   {
+    "q": "Which bar is the highest?",
+    "a": "Mon"
+   },
+   {
+    "q": "Which bar is the lowest?",
+    "a": "Fri"
+   },
+   {
+    "q": "What is the value for Wed?",
+    "a": "65"
+   }
+  ]
+ },
+ {
+  "id": "s38",
+  "kind": "chart",
+  "title": "Defects found per sprint",
+  "questions": [
+   {
+    "q": "Which bar is the highest?",
+    "a": "Omega"
+   },
+   {
+    "q": "Which bar is the lowest?",
+    "a": "Alpha"
+   }
+  ]
+ },
+ {
+  "id": "s39",
+  "kind": "chart",
+  "title": "Rainfall by month in millimeters",
+  "questions": [
+   {
+    "q": "Which bar is the highest?",
+    "a": "2025"
+   },
+   {
+    "q": "Which bar is the lowest?",
+    "a": "2022"
+   },
+   {
+    "q": "What is the value for 2024?",
+    "a": "456"
+   }
+  ]
+ },
+ {
+  "id": "s40",
+  "kind": "chart",
+  "title": "Donations by campaign, in thousands",
+  "questions": [
+   {
+    "q": "Which bar is the highest?",
+    "a": "v1.1"
+   },
+   {
+    "q": "Which bar is the lowest?",
+    "a": "v1.2"
+   }
+  ]
+ },
+ {
+  "id": "s41",
+  "kind": "chart",
+  "title": "Battery life in hours by model",
+  "questions": [
+   {
+    "q": "Which bar is the highest?",
+    "a": "Mon"
+   },
+   {
+    "q": "Which bar is the lowest?",
+    "a": "Wed"
+   },
+   {
+    "q": "What is the value for Wed?",
+    "a": "29"
+   }
+  ]
+ },
+ {
+  "id": "s42",
+  "kind": "chart",
+  "title": "Churn rate by cohort, percent",
+  "questions": [
+   {
+    "q": "Which bar is the highest?",
+    "a": "Alpha"
+   },
+   {
+    "q": "Which bar is the lowest?",
+    "a": "Omega"
+   }
+  ]
+ },
+ {
+  "id": "s43",
+  "kind": "section",
+  "title": "Thank you",
+  "questions": []
+ },
+ {
+  "id": "s44",
+  "kind": "section",
+  "title": "Part 2",
+  "questions": []
+ },
+ {
+  "id": "s45",
+  "kind": "section",
+  "title": "Demo",
+  "questions": []
+ },
+ {
+  "id": "s46",
+  "kind": "section",
+  "title": "Agenda",
+  "questions": []
+ },
+ {
+  "id": "s47",
+  "kind": "section",
+  "title": "Break",
+  "questions": []
+ },
+ {
+  "id": "s48",
+  "kind": "section",
+  "title": "Appendix",
+  "questions": []
+ },
+ {
+  "id": "s49",
+  "kind": "section",
+  "title": "Welcome",
+  "questions": []
+ },
+ {
+  "id": "s50",
+  "kind": "section",
+  "title": "Key takeaway",
+  "questions": []
+ },
+ {
+  "id": "h01",
+  "kind": "dense-table",
+  "title": "Monthly orders by office",
+  "questions": [
+   {
+    "type": "cell",
+    "q": "What is the value for Houston in May?",
+    "a": "7402"
+   },
+   {
+    "type": "argmax",
+    "q": "Which office has the highest value in Aug?",
+    "a": "Lisbon"
+   },
+   {
+    "type": "sum",
+    "q": "What is the total for Kyoto across all eight months?",
+    "a": "30537"
+   }
+  ]
+ },
+ {
+  "id": "h02",
+  "kind": "dense-table",
+  "title": "Tickets closed by office",
+  "questions": [
+   {
+    "type": "cell",
+    "q": "What is the value for Istanbul in Jul?",
+    "a": "3962"
+   },
+   {
+    "type": "argmax",
+    "q": "Which office has the highest value in Jan?",
+    "a": "Berlin"
+   },
+   {
+    "type": "sum",
+    "q": "What is the total for Istanbul across all eight months?",
+    "a": "32857"
+   }
+  ]
+ },
+ {
+  "id": "h03",
+  "kind": "dense-table",
+  "title": "Visitors by office, in thousands",
+  "questions": [
+   {
+    "type": "cell",
+    "q": "What is the value for Atlanta in Aug?",
+    "a": "5726"
+   },
+   {
+    "type": "argmax",
+    "q": "Which office has the highest value in May?",
+    "a": "Houston"
+   },
+   {
+    "type": "sum",
+    "q": "What is the total for Berlin across all eight months?",
+    "a": "43329"
+   }
+  ]
+ },
+ {
+  "id": "h04",
+  "kind": "dense-table",
+  "title": "Units shipped by office",
+  "questions": [
+   {
+    "type": "cell",
+    "q": "What is the value for Atlanta in Jan?",
+    "a": "4085"
+   },
+   {
+    "type": "argmax",
+    "q": "Which office has the highest value in Apr?",
+    "a": "Istanbul"
+   },
+   {
+    "type": "sum",
+    "q": "What is the total for Edinburgh across all eight months?",
+    "a": "38299"
+   }
+  ]
+ },
+ {
+  "id": "h05",
+  "kind": "dense-table",
+  "title": "New accounts by office",
+  "questions": [
+   {
+    "type": "cell",
+    "q": "What is the value for Houston in Apr?",
+    "a": "1430"
+   },
+   {
+    "type": "argmax",
+    "q": "Which office has the highest value in Aug?",
+    "a": "Berlin"
+   },
+   {
+    "type": "sum",
+    "q": "What is the total for Frankfurt across all eight months?",
+    "a": "35766"
+   }
+  ]
+ },
+ {
+  "id": "h06",
+  "kind": "dense-table",
+  "title": "Calls handled by office",
+  "questions": [
+   {
+    "type": "cell",
+    "q": "What is the value for Dublin in May?",
+    "a": "6276"
+   },
+   {
+    "type": "argmax",
+    "q": "Which office has the highest value in Aug?",
+    "a": "Lisbon"
+   },
+   {
+    "type": "sum",
+    "q": "What is the total for Berlin across all eight months?",
+    "a": "46990"
+   }
+  ]
+ },
+ {
+  "id": "h07",
+  "kind": "dense-table",
+  "title": "Returns by office",
+  "questions": [
+   {
+    "type": "cell",
+    "q": "What is the value for Istanbul in May?",
+    "a": "3187"
+   },
+   {
+    "type": "argmax",
+    "q": "Which office has the highest value in Jun?",
+    "a": "Houston"
+   },
+   {
+    "type": "sum",
+    "q": "What is the total for Berlin across all eight months?",
+    "a": "33530"
+   }
+  ]
+ },
+ {
+  "id": "h08",
+  "kind": "dense-table",
+  "title": "Training hours by office",
+  "questions": [
+   {
+    "type": "cell",
+    "q": "What is the value for Lisbon in May?",
+    "a": "3050"
+   },
+   {
+    "type": "argmax",
+    "q": "Which office has the highest value in Mar?",
+    "a": "Chicago"
+   },
+   {
+    "type": "sum",
+    "q": "What is the total for Istanbul across all eight months?",
+    "a": "32927"
+   }
+  ]
+ },
+ {
+  "id": "h09",
+  "kind": "dense-table",
+  "title": "Open invoices by office",
+  "questions": [
+   {
+    "type": "cell",
+    "q": "What is the value for Chicago in Aug?",
+    "a": "3349"
+   },
+   {
+    "type": "argmax",
+    "q": "Which office has the highest value in May?",
+    "a": "Jakarta"
+   },
+   {
+    "type": "sum",
+    "q": "What is the total for Houston across all eight months?",
+    "a": "44482"
+   }
+  ]
+ },
+ {
+  "id": "h10",
+  "kind": "dense-table",
+  "title": "Site inspections by office",
+  "questions": [
+   {
+    "type": "cell",
+    "q": "What is the value for Geneva in Aug?",
+    "a": "4700"
+   },
+   {
+    "type": "argmax",
+    "q": "Which office has the highest value in Jan?",
+    "a": "Frankfurt"
+   },
+   {
+    "type": "sum",
+    "q": "What is the total for Houston across all eight months?",
+    "a": "31366"
+   }
+  ]
+ },
+ {
+  "id": "h11",
+  "kind": "chart-unlabeled",
+  "title": "Sign-ups per week",
+  "questions": [
+   {
+    "type": "estimate",
+    "q": "About what value does Group C reach? Give a number.",
+    "a": "66",
+    "tol": 8
+   },
+   {
+    "type": "argmax",
+    "q": "Which group has the tallest bar? Give the group name.",
+    "a": "Group A"
+   },
+   {
+    "type": "rank2",
+    "q": "Which group has the second tallest bar? Give the group name.",
+    "a": "Group B"
+   }
+  ]
+ },
+ {
+  "id": "h12",
+  "kind": "chart-unlabeled",
+  "title": "Tickets per day",
+  "questions": [
+   {
+    "type": "estimate",
+    "q": "About what value does Group C reach? Give a number.",
+    "a": "175",
+    "tol": 16
+   },
+   {
+    "type": "argmax",
+    "q": "Which group has the tallest bar? Give the group name.",
+    "a": "Group C"
+   },
+   {
+    "type": "rank2",
+    "q": "Which group has the second tallest bar? Give the group name.",
+    "a": "Group E"
+   }
+  ]
+ },
+ {
+  "id": "h13",
+  "kind": "chart-unlabeled",
+  "title": "Sessions per release",
+  "questions": [
+   {
+    "type": "estimate",
+    "q": "About what value does Group F reach? Give a number.",
+    "a": "279",
+    "tol": 40
+   },
+   {
+    "type": "argmax",
+    "q": "Which group has the tallest bar? Give the group name.",
+    "a": "Group E"
+   },
+   {
+    "type": "rank2",
+    "q": "Which group has the second tallest bar? Give the group name.",
+    "a": "Group F"
+   }
+  ]
+ },
+ {
+  "id": "h14",
+  "kind": "chart-unlabeled",
+  "title": "Revenue per quarter, in thousands",
+  "questions": [
+   {
+    "type": "estimate",
+    "q": "About what value does Group F reach? Give a number.",
+    "a": "867",
+    "tol": 80
+   },
+   {
+    "type": "argmax",
+    "q": "Which group has the tallest bar? Give the group name.",
+    "a": "Group F"
+   },
+   {
+    "type": "rank2",
+    "q": "Which group has the second tallest bar? Give the group name.",
+    "a": "Group C"
+   }
+  ]
+ },
+ {
+  "id": "h15",
+  "kind": "chart-unlabeled",
+  "title": "Defects per sprint",
+  "questions": [
+   {
+    "type": "estimate",
+    "q": "About what value does Group A reach? Give a number.",
+    "a": "45",
+    "tol": 4
+   },
+   {
+    "type": "argmax",
+    "q": "Which group has the tallest bar? Give the group name.",
+    "a": "Group A"
+   },
+   {
+    "type": "rank2",
+    "q": "Which group has the second tallest bar? Give the group name.",
+    "a": "Group E"
+   }
+  ]
+ },
+ {
+  "id": "h16",
+  "kind": "chart-unlabeled",
+  "title": "Orders per region",
+  "questions": [
+   {
+    "type": "estimate",
+    "q": "About what value does Group D reach? Give a number.",
+    "a": "65",
+    "tol": 8
+   },
+   {
+    "type": "argmax",
+    "q": "Which group has the tallest bar? Give the group name.",
+    "a": "Group E"
+   },
+   {
+    "type": "rank2",
+    "q": "Which group has the second tallest bar? Give the group name.",
+    "a": "Group F"
+   }
+  ]
+ },
+ {
+  "id": "h17",
+  "kind": "chart-unlabeled",
+  "title": "Downloads per month",
+  "questions": [
+   {
+    "type": "estimate",
+    "q": "About what value does Group C reach? Give a number.",
+    "a": "96",
+    "tol": 16
+   },
+   {
+    "type": "argmax",
+    "q": "Which group has the tallest bar? Give the group name.",
+    "a": "Group D"
+   },
+   {
+    "type": "rank2",
+    "q": "Which group has the second tallest bar? Give the group name.",
+    "a": "Group B"
+   }
+  ]
+ },
+ {
+  "id": "h18",
+  "kind": "chart-unlabeled",
+  "title": "Visits per campaign",
+  "questions": [
+   {
+    "type": "estimate",
+    "q": "About what value does Group E reach? Give a number.",
+    "a": "180",
+    "tol": 40
+   },
+   {
+    "type": "argmax",
+    "q": "Which group has the tallest bar? Give the group name.",
+    "a": "Group C"
+   },
+   {
+    "type": "rank2",
+    "q": "Which group has the second tallest bar? Give the group name.",
+    "a": "Group A"
+   }
+  ]
+ },
+ {
+  "id": "h19",
+  "kind": "chart-unlabeled",
+  "title": "Hours per project",
+  "questions": [
+   {
+    "type": "estimate",
+    "q": "About what value does Group A reach? Give a number.",
+    "a": "218",
+    "tol": 80
+   },
+   {
+    "type": "argmax",
+    "q": "Which group has the tallest bar? Give the group name.",
+    "a": "Group E"
+   },
+   {
+    "type": "rank2",
+    "q": "Which group has the second tallest bar? Give the group name.",
+    "a": "Group D"
+   }
+  ]
+ },
+ {
+  "id": "h20",
+  "kind": "chart-unlabeled",
+  "title": "Leads per channel",
+  "questions": [
+   {
+    "type": "estimate",
+    "q": "About what value does Group B reach? Give a number.",
+    "a": "17",
+    "tol": 4
+   },
+   {
+    "type": "argmax",
+    "q": "Which group has the tallest bar? Give the group name.",
+    "a": "Group F"
+   },
+   {
+    "type": "rank2",
+    "q": "Which group has the second tallest bar? Give the group name.",
+    "a": "Group C"
+   }
+  ]
+ },
+ {
+  "id": "h21",
+  "kind": "line-chart",
+  "title": "Latency by region",
+  "questions": [
+   {
+    "type": "trend",
+    "q": "Which series rose the most from Jan to Jun? Give the series name.",
+    "a": "South"
+   },
+   {
+    "type": "series-at",
+    "q": "Which series is highest in May? Give the series name.",
+    "a": "South"
+   }
+  ]
+ },
+ {
+  "id": "h22",
+  "kind": "line-chart",
+  "title": "Active users by plan",
+  "questions": [
+   {
+    "type": "trend",
+    "q": "Which series rose the most from Jan to Jun? Give the series name.",
+    "a": "West"
+   }
+  ]
+ },
+ {
+  "id": "h23",
+  "kind": "line-chart",
+  "title": "Cost per unit by plant",
+  "questions": [
+   {
+    "type": "trend",
+    "q": "Which series rose the most from Jan to Jun? Give the series name.",
+    "a": "South"
+   },
+   {
+    "type": "series-at",
+    "q": "Which series is highest in Feb? Give the series name.",
+    "a": "North"
+   }
+  ]
+ },
+ {
+  "id": "h24",
+  "kind": "line-chart",
+  "title": "Scores by section",
+  "questions": [
+   {
+    "type": "trend",
+    "q": "Which series rose the most from Jan to Jun? Give the series name.",
+    "a": "West"
+   },
+   {
+    "type": "series-at",
+    "q": "Which series is highest in Apr? Give the series name.",
+    "a": "South"
+   }
+  ]
+ },
+ {
+  "id": "h25",
+  "kind": "line-chart",
+  "title": "Stock by warehouse",
+  "questions": [
+   {
+    "type": "trend",
+    "q": "Which series rose the most from Jan to Jun? Give the series name.",
+    "a": "West"
+   },
+   {
+    "type": "series-at",
+    "q": "Which series is highest in Feb? Give the series name.",
+    "a": "West"
+   }
+  ]
+ },
+ {
+  "id": "h26",
+  "kind": "line-chart",
+  "title": "Uptime by service",
+  "questions": [
+   {
+    "type": "trend",
+    "q": "Which series rose the most from Jan to Jun? Give the series name.",
+    "a": "West"
+   },
+   {
+    "type": "series-at",
+    "q": "Which series is highest in Jun? Give the series name.",
+    "a": "West"
+   }
+  ]
+ },
+ {
+  "id": "h27",
+  "kind": "line-chart",
+  "title": "Traffic by source",
+  "questions": [
+   {
+    "type": "trend",
+    "q": "Which series rose the most from Jan to Jun? Give the series name.",
+    "a": "North"
+   },
+   {
+    "type": "series-at",
+    "q": "Which series is highest in Jun? Give the series name.",
+    "a": "North"
+   }
+  ]
+ },
+ {
+  "id": "h28",
+  "kind": "line-chart",
+  "title": "Wait time by clinic",
+  "questions": [
+   {
+    "type": "trend",
+    "q": "Which series rose the most from Jan to Jun? Give the series name.",
+    "a": "West"
+   },
+   {
+    "type": "series-at",
+    "q": "Which series is highest in May? Give the series name.",
+    "a": "North"
+   }
+  ]
+ },
+ {
+  "id": "h29",
+  "kind": "line-chart",
+  "title": "Output by line",
+  "questions": [
+   {
+    "type": "trend",
+    "q": "Which series rose the most from Jan to Jun? Give the series name.",
+    "a": "West"
+   },
+   {
+    "type": "series-at",
+    "q": "Which series is highest in Mar? Give the series name.",
+    "a": "North"
+   }
+  ]
+ },
+ {
+  "id": "h30",
+  "kind": "line-chart",
+  "title": "Enrollment by campus",
+  "questions": [
+   {
+    "type": "trend",
+    "q": "Which series rose the most from Jan to Jun? Give the series name.",
+    "a": "South"
+   },
+   {
+    "type": "series-at",
+    "q": "Which series is highest in Jan? Give the series name.",
+    "a": "South"
+   }
+  ]
+ },
+ {
+  "id": "h31",
+  "kind": "flow",
+  "title": "Support flow",
+  "questions": [
+   {
+    "type": "next",
+    "q": "Following the arrows, which step comes right after Triage?",
+    "a": "Assign"
+   },
+   {
+    "type": "last",
+    "q": "Following the arrows, which step is the last one?",
+    "a": "Review"
+   }
+  ]
+ },
+ {
+  "id": "h32",
+  "kind": "flow",
+  "title": "Launch approval flow",
+  "questions": [
+   {
+    "type": "next",
+    "q": "Following the arrows, which step comes right after Legal check?",
+    "a": "Pricing"
+   },
+   {
+    "type": "last",
+    "q": "Following the arrows, which step is the last one?",
+    "a": "Publish"
+   }
+  ]
+ },
+ {
+  "id": "h33",
+  "kind": "flow",
+  "title": "Fulfilment flow",
+  "questions": [
+   {
+    "type": "next",
+    "q": "Following the arrows, which step comes right after Payment?",
+    "a": "Packing"
+   },
+   {
+    "type": "last",
+    "q": "Following the arrows, which step is the last one?",
+    "a": "Delivery"
+   }
+  ]
+ },
+ {
+  "id": "h34",
+  "kind": "flow",
+  "title": "Model release flow",
+  "questions": [
+   {
+    "type": "next",
+    "q": "Following the arrows, which step comes right after Clean?",
+    "a": "Train"
+   },
+   {
+    "type": "last",
+    "q": "Following the arrows, which step is the last one?",
+    "a": "Deploy"
+   }
+  ]
+ },
+ {
+  "id": "h35",
+  "kind": "flow",
+  "title": "Hiring flow",
+  "questions": [
+   {
+    "type": "next",
+    "q": "Following the arrows, which step comes right after Screen?",
+    "a": "Interview"
+   },
+   {
+    "type": "last",
+    "q": "Following the arrows, which step is the last one?",
+    "a": "Onboard"
+   }
+  ]
+ },
+ {
+  "id": "h36",
+  "kind": "flow",
+  "title": "Incident flow",
+  "questions": [
+   {
+    "type": "next",
+    "q": "Following the arrows, which step comes right after Page?",
+    "a": "Mitigate"
+   },
+   {
+    "type": "last",
+    "q": "Following the arrows, which step is the last one?",
+    "a": "Postmortem"
+   }
+  ]
+ }
+]

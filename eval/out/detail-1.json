@@ -1,0 +1,124 @@
+{
+ "summary": {
+  "slides": 22,
+  "printedValuesRight": "217 of 217",
+  "valuesReadFromAxisRight": "25 of 25",
+  "slidesFullyRight": 22,
+  "seconds": {
+   "median": 5.5,
+   "max": 6.9
+  }
+ },
+ "rows": [
+  {
+   "id": "s21",
+   "kind": "table",
+   "wrong": []
+  },
+  {
+   "id": "s22",
+   "kind": "table",
+   "wrong": []
+  },
+  {
+   "id": "s23",
+   "kind": "table",
+   "wrong": []
+  },
+  {
+   "id": "s24",
+   "kind": "table",
+   "wrong": []
+  },
+  {
+   "id": "s25",
+   "kind": "table",
+   "wrong": []
+  },
+  {
+   "id": "s26",
+   "kind": "table",
+   "wrong": []
+  },
+  {
+   "id": "s27",
+   "kind": "table",
+   "wrong": []
+  },
+  {
+   "id": "s28",
+   "kind": "table",
+   "wrong": []
+  },
+  {
+   "id": "s29",
+   "kind": "table",
+   "wrong": []
+  },
+  {
+   "id": "s30",
+   "kind": "table",
+   "wrong": []
+  },
+  {
+   "id": "s31",
+   "kind": "table",
+   "wrong": []
+  },
+  {
+   "id": "s32",
+   "kind": "table",
+   "wrong": []
+  },
+  {
+   "id": "s33",
+   "kind": "chart",
+   "wrong": []
+  },
+  {
+   "id": "s34",
+   "kind": "chart",
+   "wrong": []
+  },
+  {
+   "id": "s35",
+   "kind": "chart",
+   "wrong": []
+  },
+  {
+   "id": "s36",
+   "kind": "chart",
+   "wrong": []
+  },
+  {
+   "id": "s37",
+   "kind": "chart",
+   "wrong": []
+  },
+  {
+   "id": "s38",
+   "kind": "chart",
+   "wrong": []
+  },
+  {
+   "id": "s39",
+   "kind": "chart",
+   "wrong": []
+  },
+  {
+   "id": "s40",
+   "kind": "chart",
+   "wrong": []
+  },
+  {
+   "id": "s41",
+   "kind": "chart",
+   "wrong": []
+  },
+  {
+   "id": "s42",
+   "kind": "chart",
+   "wrong": []
+  }
+ ]
+}

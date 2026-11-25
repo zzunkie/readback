@@ -1,0 +1,22 @@
+<!doctype html><meta charset="utf-8"><title>Readback: data description evaluation</title><pre id="o">running…</pre>
+<script type="module">
+// For the 22 table and chart slides whose data we know, asks the cloud description (the app's own
+// describeDetail) for the data and counts how many values come back right. A chart without printed
+// values counts as right within 8% of the tallest bar.
+import { describeDetail } from '/src/models.js';
+const slides = await (await fetch('/eval/data-slides.json')).json();
+const b64 = async (id) => { const b = await (await fetch(`/eval/${id}.jpg`)).blob(); return await new Promise((r) => { const f = new FileReader(); f.onload = () => r(f.result.split(',')[1]); f.readAsDataURL(b); }); };
+const num = (s) => parseFloat(String(s).replace(/[^0-9.\-]/g, '')); const norm = (s) => String(s).toLowerCase().replace(/[^a-z0-9.]/g, '');
+const rows = []; let cells = 0, right = 0, est = 0, estRight = 0, ms = [];
+for (const s of slides) {
+  const t = performance.now(); let d; try { d = await describeDetail(await b64(s.id)); } catch (e) { rows.push({ id: s.id, error: e.message }); continue; }
+  ms.push(performance.now() - t); const got = new Map((d.rows || []).map((r) => [norm(r[0]), r.slice(1)])); const row = { id: s.id, kind: s.kind, wrong: [] };
+  if (s.table) s.table.rows.forEach((name, i) => s.table.cells[i].forEach((v, j) => { cells += 1; const g = (got.get(norm(name)) || [])[j]; if (norm(g ?? '') === norm(v)) right += 1; else row.wrong.push([name, s.table.cols[j], v, g]); }));
+  if (s.chart) { const max = Math.max(...s.chart.vals); s.chart.labels.forEach((name, i) => { const g = (got.get(norm(name)) || [])[0]; const v = s.chart.vals[i];
+    if (s.chart.labelled) { cells += 1; if (num(g) === v) right += 1; else row.wrong.push([name, v, g]); } else { est += 1; if (Math.abs(num(g) - v) <= max * 0.08) estRight += 1; else row.wrong.push([name, v, g]); } }); }
+  rows.push(row); document.getElementById('o').textContent = `${rows.length} of ${slides.length}`;
+}
+const sorted = ms.sort((a, b) => a - b);
+const summary = { slides: slides.length, printedValuesRight: `${right} of ${cells}`, valuesReadFromAxisRight: `${estRight} of ${est}`, slidesFullyRight: rows.filter((r) => r.wrong && !r.wrong.length).length, seconds: { median: +(sorted[Math.floor(sorted.length / 2)] / 1000).toFixed(1), max: +(sorted[sorted.length - 1] / 1000).toFixed(1) } };
+window.__eval = { summary, rows }; document.getElementById('o').textContent = JSON.stringify(summary, null, 1);
+</script>

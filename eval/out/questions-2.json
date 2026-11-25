@@ -1,0 +1,1237 @@
+{
+ "summary": {
+  "questions": 91,
+  "onDevice": 53,
+  "flashLite": 78,
+  "hydrogen": 91
+ },
+ "rows": [
+  {
+   "id": "h01",
+   "kind": "dense-table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "What is the value for Houston in May?",
+     "a": "7402",
+     "device": "7,402",
+     "deviceMs": 1795,
+     "lite": "7,402",
+     "liteMs": 1547,
+     "big": "7,402",
+     "bigMs": 3198
+    },
+    {
+     "type": "argmax",
+     "q": "Which office has the highest value in Aug?",
+     "a": "Lisbon",
+     "device": "Berlin",
+     "deviceMs": 1397,
+     "lite": "Lisbon",
+     "liteMs": 1499,
+     "big": "Lisbon",
+     "bigMs": 2980
+    },
+    {
+     "type": "sum",
+     "q": "What is the total for Kyoto across all eight months?",
+     "a": "30537",
+     "device": "4398",
+     "deviceMs": 1549,
+     "lite": "30,537",
+     "liteMs": 1318,
+     "big": "30,537",
+     "bigMs": 5014
+    }
+   ]
+  },
+  {
+   "id": "h02",
+   "kind": "dense-table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "What is the value for Istanbul in Jul?",
+     "a": "3962",
+     "device": "3,962",
+     "deviceMs": 1659,
+     "lite": "3,962",
+     "liteMs": 1416,
+     "big": "3,962",
+     "bigMs": 3701
+    },
+    {
+     "type": "argmax",
+     "q": "Which office has the highest value in Jan?",
+     "a": "Berlin",
+     "device": "Berlin",
+     "deviceMs": 1398,
+     "lite": "Berlin",
+     "liteMs": 1327,
+     "big": "Berlin",
+     "bigMs": 3401
+    },
+    {
+     "type": "sum",
+     "q": "What is the total for Istanbul across all eight months?",
+     "a": "32857",
+     "device": "30,539",
+     "deviceMs": 1695,
+     "lite": "33,868",
+     "liteMs": 1301,
+     "big": "32,857",
+     "bigMs": 3879
+    }
+   ]
+  },
+  {
+   "id": "h03",
+   "kind": "dense-table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "What is the value for Atlanta in Aug?",
+     "a": "5726",
+     "device": "5,912",
+     "deviceMs": 1546,
+     "lite": "5,726",
+     "liteMs": 1168,
+     "big": "5,726",
+     "bigMs": 3003
+    },
+    {
+     "type": "argmax",
+     "q": "Which office has the highest value in May?",
+     "a": "Houston",
+     "device": "Barcelona",
+     "deviceMs": 1490,
+     "lite": "Houston",
+     "liteMs": 1167,
+     "big": "Houston",
+     "bigMs": 3094
+    },
+    {
+     "type": "sum",
+     "q": "What is the total for Berlin across all eight months?",
+     "a": "43329",
+     "device": "5912",
+     "deviceMs": 1569,
+     "lite": "43,329",
+     "liteMs": 1306,
+     "big": "43,329",
+     "bigMs": 7993
+    }
+   ]
+  },
+  {
+   "id": "h04",
+   "kind": "dense-table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "What is the value for Atlanta in Jan?",
+     "a": "4085",
+     "device": "4,085",
+     "deviceMs": 1635,
+     "lite": "4,085",
+     "liteMs": 1300,
+     "big": "4,085",
+     "bigMs": 3758
+    },
+    {
+     "type": "argmax",
+     "q": "Which office has the highest value in Apr?",
+     "a": "Istanbul",
+     "device": "Atlanta",
+     "deviceMs": 1356,
+     "lite": "Istanbul",
+     "liteMs": 1294,
+     "big": "Istanbul",
+     "bigMs": 3333
+    },
+    {
+     "type": "sum",
+     "q": "What is the total for Edinburgh across all eight months?",
+     "a": "38299",
+     "device": "5648",
+     "deviceMs": 1535,
+     "lite": "38,751",
+     "liteMs": 1307,
+     "big": "38,299",
+     "bigMs": 4345
+    }
+   ]
+  },
+  {
+   "id": "h05",
+   "kind": "dense-table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "What is the value for Houston in Apr?",
+     "a": "1430",
+     "device": "1,430",
+     "deviceMs": 1573,
+     "lite": "1,430",
+     "liteMs": 1319,
+     "big": "1,430",
+     "bigMs": 2905
+    },
+    {
+     "type": "argmax",
+     "q": "Which office has the highest value in Aug?",
+     "a": "Berlin",
+     "device": "Berlin",
+     "deviceMs": 1475,
+     "lite": "Berlin",
+     "liteMs": 1216,
+     "big": "Berlin",
+     "bigMs": 3768
+    },
+    {
+     "type": "sum",
+     "q": "What is the total for Frankfurt across all eight months?",
+     "a": "35766",
+     "device": "57,242",
+     "deviceMs": 1613,
+     "lite": "31,966",
+     "liteMs": 1238,
+     "big": "35,766",
+     "bigMs": 4850
+    }
+   ]
+  },
+  {
+   "id": "h06",
+   "kind": "dense-table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "What is the value for Dublin in May?",
+     "a": "6276",
+     "device": "6,276",
+     "deviceMs": 1640,
+     "lite": "6,276",
+     "liteMs": 1123,
+     "big": "6,276",
+     "bigMs": 3276
+    },
+    {
+     "type": "argmax",
+     "q": "Which office has the highest value in Aug?",
+     "a": "Lisbon",
+     "device": "Berlin",
+     "deviceMs": 1321,
+     "lite": "Lisbon",
+     "liteMs": 1340,
+     "big": "Lisbon",
+     "bigMs": 3014
+    },
+    {
+     "type": "sum",
+     "q": "What is the total for Berlin across all eight months?",
+     "a": "46990",
+     "device": "5498",
+     "deviceMs": 1556,
+     "lite": "42,994",
+     "liteMs": 1476,
+     "big": "46,990",
+     "bigMs": 5527
+    }
+   ]
+  },
+  {
+   "id": "h07",
+   "kind": "dense-table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "What is the value for Istanbul in May?",
+     "a": "3187",
+     "device": "7,019",
+     "deviceMs": 1617,
+     "lite": "3,187",
+     "liteMs": 1553,
+     "big": "3,187",
+     "bigMs": 3052
+    },
+    {
+     "type": "argmax",
+     "q": "Which office has the highest value in Jun?",
+     "a": "Houston",
+     "device": "Atlanta",
+     "deviceMs": 1441,
+     "lite": "Houston",
+     "liteMs": 1397,
+     "big": "Houston",
+     "bigMs": 3726
+    },
+    {
+     "type": "sum",
+     "q": "What is the total for Berlin across all eight months?",
+     "a": "33530",
+     "device": "55,708",
+     "deviceMs": 1671,
+     "lite": "31,530",
+     "liteMs": 1515,
+     "big": "33,530",
+     "bigMs": 3828
+    }
+   ]
+  },
+  {
+   "id": "h08",
+   "kind": "dense-table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "What is the value for Lisbon in May?",
+     "a": "3050",
+     "device": "8,622",
+     "deviceMs": 1669,
+     "lite": "3,050",
+     "liteMs": 1253,
+     "big": "3,050",
+     "bigMs": 9368
+    },
+    {
+     "type": "argmax",
+     "q": "Which office has the highest value in Mar?",
+     "a": "Chicago",
+     "device": "Berlin",
+     "deviceMs": 1385,
+     "lite": "Chicago",
+     "liteMs": 1288,
+     "big": "Chicago",
+     "bigMs": 2926
+    },
+    {
+     "type": "sum",
+     "q": "What is the total for Istanbul across all eight months?",
+     "a": "32927",
+     "device": "46,434",
+     "deviceMs": 1674,
+     "lite": "32,928",
+     "liteMs": 1109,
+     "big": "32,927",
+     "bigMs": 3862
+    }
+   ]
+  },
+  {
+   "id": "h09",
+   "kind": "dense-table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "What is the value for Chicago in Aug?",
+     "a": "3349",
+     "device": "3,349",
+     "deviceMs": 1679,
+     "lite": "3,349",
+     "liteMs": 1336,
+     "big": "3,349",
+     "bigMs": 2788
+    },
+    {
+     "type": "argmax",
+     "q": "Which office has the highest value in May?",
+     "a": "Jakarta",
+     "device": "Chicago",
+     "deviceMs": 1435,
+     "lite": "Jakarta",
+     "liteMs": 1303,
+     "big": "Jakarta",
+     "bigMs": 3015
+    },
+    {
+     "type": "sum",
+     "q": "What is the total for Houston across all eight months?",
+     "a": "44482",
+     "device": "7,869",
+     "deviceMs": 1661,
+     "lite": "45,474",
+     "liteMs": 1100,
+     "big": "44,482",
+     "bigMs": 4594
+    }
+   ]
+  },
+  {
+   "id": "h10",
+   "kind": "dense-table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "What is the value for Geneva in Aug?",
+     "a": "4700",
+     "device": "4,700",
+     "deviceMs": 1608,
+     "lite": "4,700",
+     "liteMs": 1312,
+     "big": "4,700",
+     "bigMs": 3153
+    },
+    {
+     "type": "argmax",
+     "q": "Which office has the highest value in Jan?",
+     "a": "Frankfurt",
+     "device": "Frankfurt",
+     "deviceMs": 1507,
+     "lite": "Frankfurt",
+     "liteMs": 1304,
+     "big": "Frankfurt",
+     "bigMs": 3084
+    },
+    {
+     "type": "sum",
+     "q": "What is the total for Houston across all eight months?",
+     "a": "31366",
+     "device": "3032",
+     "deviceMs": 1601,
+     "lite": "31,366",
+     "liteMs": 1159,
+     "big": "31,366",
+     "bigMs": 4717
+    }
+   ]
+  },
+  {
+   "id": "h11",
+   "kind": "chart-unlabeled",
+   "q": [
+    {
+     "type": "estimate",
+     "q": "About what value does Group C reach? Give a number.",
+     "a": "66",
+     "tol": 8,
+     "device": "64",
+     "deviceMs": 1525,
+     "lite": "66",
+     "liteMs": 1180,
+     "big": "66",
+     "bigMs": 4665
+    },
+    {
+     "type": "argmax",
+     "q": "Which group has the tallest bar? Give the group name.",
+     "a": "Group A",
+     "device": "Group A",
+     "deviceMs": 1475,
+     "lite": "Group A",
+     "liteMs": 1181,
+     "big": "Group A",
+     "bigMs": 2691
+    },
+    {
+     "type": "rank2",
+     "q": "Which group has the second tallest bar? Give the group name.",
+     "a": "Group B",
+     "device": "Group B",
+     "deviceMs": 1510,
+     "lite": "Group B",
+     "liteMs": 1269,
+     "big": "Group B and Group F",
+     "bigMs": 8808
+    }
+   ]
+  },
+  {
+   "id": "h12",
+   "kind": "chart-unlabeled",
+   "q": [
+    {
+     "type": "estimate",
+     "q": "About what value does Group C reach? Give a number.",
+     "a": "175",
+     "tol": 16,
+     "device": "165",
+     "deviceMs": 1556,
+     "lite": "175",
+     "liteMs": 1291,
+     "big": "175",
+     "bigMs": 4424
+    },
+    {
+     "type": "argmax",
+     "q": "Which group has the tallest bar? Give the group name.",
+     "a": "Group C",
+     "device": "Group C",
+     "deviceMs": 1415,
+     "lite": "Group C",
+     "liteMs": 1445,
+     "big": "Group C",
+     "bigMs": 2968
+    },
+    {
+     "type": "rank2",
+     "q": "Which group has the second tallest bar? Give the group name.",
+     "a": "Group E",
+     "device": "Group E",
+     "deviceMs": 1506,
+     "lite": "Group E",
+     "liteMs": 1365,
+     "big": "Group E",
+     "bigMs": 2915
+    }
+   ]
+  },
+  {
+   "id": "h13",
+   "kind": "chart-unlabeled",
+   "q": [
+    {
+     "type": "estimate",
+     "q": "About what value does Group F reach? Give a number.",
+     "a": "279",
+     "tol": 40,
+     "device": "300",
+     "deviceMs": 1484,
+     "lite": "280",
+     "liteMs": 1024,
+     "big": "280",
+     "bigMs": 4014
+    },
+    {
+     "type": "argmax",
+     "q": "Which group has the tallest bar? Give the group name.",
+     "a": "Group E",
+     "device": "Group E",
+     "deviceMs": 1492,
+     "lite": "Group E",
+     "liteMs": 1289,
+     "big": "Group E",
+     "bigMs": 2892
+    },
+    {
+     "type": "rank2",
+     "q": "Which group has the second tallest bar? Give the group name.",
+     "a": "Group F",
+     "device": "Group F",
+     "deviceMs": 1496,
+     "lite": "Group F",
+     "liteMs": 1154,
+     "big": "Group F",
+     "bigMs": 3590
+    }
+   ]
+  },
+  {
+   "id": "h14",
+   "kind": "chart-unlabeled",
+   "q": [
+    {
+     "type": "estimate",
+     "q": "About what value does Group F reach? Give a number.",
+     "a": "867",
+     "tol": 80,
+     "device": "860",
+     "deviceMs": 1563,
+     "lite": "860",
+     "liteMs": 1449,
+     "big": "870",
+     "bigMs": 5098
+    },
+    {
+     "type": "argmax",
+     "q": "Which group has the tallest bar? Give the group name.",
+     "a": "Group F",
+     "device": "Group F",
+     "deviceMs": 1474,
+     "lite": "Group F",
+     "liteMs": 964,
+     "big": "Group F",
+     "bigMs": 4077
+    },
+    {
+     "type": "rank2",
+     "q": "Which group has the second tallest bar? Give the group name.",
+     "a": "Group C",
+     "device": "Group C",
+     "deviceMs": 1468,
+     "lite": "Group C",
+     "liteMs": 1305,
+     "big": "Group C",
+     "bigMs": 2741
+    }
+   ]
+  },
+  {
+   "id": "h15",
+   "kind": "chart-unlabeled",
+   "q": [
+    {
+     "type": "estimate",
+     "q": "About what value does Group A reach? Give a number.",
+     "a": "45",
+     "tol": 4,
+     "device": "46",
+     "deviceMs": 1476,
+     "lite": "45",
+     "liteMs": 1477,
+     "big": "45",
+     "bigMs": 3052
+    },
+    {
+     "type": "argmax",
+     "q": "Which group has the tallest bar? Give the group name.",
+     "a": "Group A",
+     "device": "Group A",
+     "deviceMs": 1516,
+     "lite": "Group A",
+     "liteMs": 1187,
+     "big": "Group A",
+     "bigMs": 2175
+    },
+    {
+     "type": "rank2",
+     "q": "Which group has the second tallest bar? Give the group name.",
+     "a": "Group E",
+     "device": "Group E",
+     "deviceMs": 1525,
+     "lite": "Group E",
+     "liteMs": 1250,
+     "big": "Group E",
+     "bigMs": 2691
+    }
+   ]
+  },
+  {
+   "id": "h16",
+   "kind": "chart-unlabeled",
+   "q": [
+    {
+     "type": "estimate",
+     "q": "About what value does Group D reach? Give a number.",
+     "a": "65",
+     "tol": 8,
+     "device": "65",
+     "deviceMs": 1445,
+     "lite": "65",
+     "liteMs": 1142,
+     "big": "65",
+     "bigMs": 2812
+    },
+    {
+     "type": "argmax",
+     "q": "Which group has the tallest bar? Give the group name.",
+     "a": "Group E",
+     "device": "Group E",
+     "deviceMs": 1410,
+     "lite": "Group E",
+     "liteMs": 1148,
+     "big": "Group E",
+     "bigMs": 2490
+    },
+    {
+     "type": "rank2",
+     "q": "Which group has the second tallest bar? Give the group name.",
+     "a": "Group F",
+     "device": "Group D",
+     "deviceMs": 1468,
+     "lite": "Group F",
+     "liteMs": 1449,
+     "big": "Group F",
+     "bigMs": 2419
+    }
+   ]
+  },
+  {
+   "id": "h17",
+   "kind": "chart-unlabeled",
+   "q": [
+    {
+     "type": "estimate",
+     "q": "About what value does Group C reach? Give a number.",
+     "a": "96",
+     "tol": 16,
+     "device": "100",
+     "deviceMs": 1534,
+     "lite": "95",
+     "liteMs": 1141,
+     "big": "96",
+     "bigMs": 5075
+    },
+    {
+     "type": "argmax",
+     "q": "Which group has the tallest bar? Give the group name.",
+     "a": "Group D",
+     "device": "Group D",
+     "deviceMs": 1463,
+     "lite": "Group D",
+     "liteMs": 1164,
+     "big": "Group D",
+     "bigMs": 3268
+    },
+    {
+     "type": "rank2",
+     "q": "Which group has the second tallest bar? Give the group name.",
+     "a": "Group B",
+     "device": "Group D",
+     "deviceMs": 1505,
+     "lite": "Group B",
+     "liteMs": 1321,
+     "big": "Group B",
+     "bigMs": 3417
+    }
+   ]
+  },
+  {
+   "id": "h18",
+   "kind": "chart-unlabeled",
+   "q": [
+    {
+     "type": "estimate",
+     "q": "About what value does Group E reach? Give a number.",
+     "a": "180",
+     "tol": 40,
+     "device": "320",
+     "deviceMs": 1547,
+     "lite": "180",
+     "liteMs": 1369,
+     "big": "180",
+     "bigMs": 3425
+    },
+    {
+     "type": "argmax",
+     "q": "Which group has the tallest bar? Give the group name.",
+     "a": "Group C",
+     "device": "Group C",
+     "deviceMs": 1434,
+     "lite": "Group C",
+     "liteMs": 1299,
+     "big": "Group C",
+     "bigMs": 3164
+    },
+    {
+     "type": "rank2",
+     "q": "Which group has the second tallest bar? Give the group name.",
+     "a": "Group A",
+     "device": "Group C",
+     "deviceMs": 1482,
+     "lite": "Group A",
+     "liteMs": 1227,
+     "big": "Group A",
+     "bigMs": 2557
+    }
+   ]
+  },
+  {
+   "id": "h19",
+   "kind": "chart-unlabeled",
+   "q": [
+    {
+     "type": "estimate",
+     "q": "About what value does Group A reach? Give a number.",
+     "a": "218",
+     "tol": 80,
+     "device": "200",
+     "deviceMs": 1577,
+     "lite": "220",
+     "liteMs": 1319,
+     "big": "220",
+     "bigMs": 3991
+    },
+    {
+     "type": "argmax",
+     "q": "Which group has the tallest bar? Give the group name.",
+     "a": "Group E",
+     "device": "Group D",
+     "deviceMs": 1456,
+     "lite": "Group E",
+     "liteMs": 1328,
+     "big": "Group E",
+     "bigMs": 2742
+    },
+    {
+     "type": "rank2",
+     "q": "Which group has the second tallest bar? Give the group name.",
+     "a": "Group D",
+     "device": "Group D",
+     "deviceMs": 1466,
+     "lite": "Group D",
+     "liteMs": 1322,
+     "big": "Group D",
+     "bigMs": 2890
+    }
+   ]
+  },
+  {
+   "id": "h20",
+   "kind": "chart-unlabeled",
+   "q": [
+    {
+     "type": "estimate",
+     "q": "About what value does Group B reach? Give a number.",
+     "a": "17",
+     "tol": 4,
+     "device": "40",
+     "deviceMs": 1488,
+     "lite": "17",
+     "liteMs": 1221,
+     "big": "17",
+     "bigMs": 3536
+    },
+    {
+     "type": "argmax",
+     "q": "Which group has the tallest bar? Give the group name.",
+     "a": "Group F",
+     "device": "Group F",
+     "deviceMs": 1528,
+     "lite": "Group F",
+     "liteMs": 1308,
+     "big": "Group F",
+     "bigMs": 3178
+    },
+    {
+     "type": "rank2",
+     "q": "Which group has the second tallest bar? Give the group name.",
+     "a": "Group C",
+     "device": "Group F",
+     "deviceMs": 1446,
+     "lite": "Group C",
+     "liteMs": 1342,
+     "big": "Group C",
+     "bigMs": 2836
+    }
+   ]
+  },
+  {
+   "id": "h21",
+   "kind": "line-chart",
+   "q": [
+    {
+     "type": "trend",
+     "q": "Which series rose the most from Jan to Jun? Give the series name.",
+     "a": "South",
+     "device": "South",
+     "deviceMs": 1487,
+     "lite": "West",
+     "liteMs": 1355,
+     "big": "South",
+     "bigMs": 3910
+    },
+    {
+     "type": "series-at",
+     "q": "Which series is highest in May? Give the series name.",
+     "a": "South",
+     "device": "North",
+     "deviceMs": 1439,
+     "lite": "South",
+     "liteMs": 1312,
+     "big": "South",
+     "bigMs": 4777
+    }
+   ]
+  },
+  {
+   "id": "h22",
+   "kind": "line-chart",
+   "q": [
+    {
+     "type": "trend",
+     "q": "Which series rose the most from Jan to Jun? Give the series name.",
+     "a": "West",
+     "device": "West",
+     "deviceMs": 1456,
+     "lite": "West",
+     "liteMs": 1322,
+     "big": "West",
+     "bigMs": 3036
+    }
+   ]
+  },
+  {
+   "id": "h23",
+   "kind": "line-chart",
+   "q": [
+    {
+     "type": "trend",
+     "q": "Which series rose the most from Jan to Jun? Give the series name.",
+     "a": "South",
+     "device": "South",
+     "deviceMs": 1494,
+     "lite": "South",
+     "liteMs": 1282,
+     "big": "South",
+     "bigMs": 3674
+    },
+    {
+     "type": "series-at",
+     "q": "Which series is highest in Feb? Give the series name.",
+     "a": "North",
+     "device": "North",
+     "deviceMs": 1469,
+     "lite": "North",
+     "liteMs": 1212,
+     "big": "North",
+     "bigMs": 3142
+    }
+   ]
+  },
+  {
+   "id": "h24",
+   "kind": "line-chart",
+   "q": [
+    {
+     "type": "trend",
+     "q": "Which series rose the most from Jan to Jun? Give the series name.",
+     "a": "West",
+     "device": "North",
+     "deviceMs": 1424,
+     "lite": "South",
+     "liteMs": 1260,
+     "big": "West",
+     "bigMs": 4083
+    },
+    {
+     "type": "series-at",
+     "q": "Which series is highest in Apr? Give the series name.",
+     "a": "South",
+     "device": "North",
+     "deviceMs": 1417,
+     "lite": "South",
+     "liteMs": 1313,
+     "big": "South",
+     "bigMs": 3107
+    }
+   ]
+  },
+  {
+   "id": "h25",
+   "kind": "line-chart",
+   "q": [
+    {
+     "type": "trend",
+     "q": "Which series rose the most from Jan to Jun? Give the series name.",
+     "a": "West",
+     "device": "West",
+     "deviceMs": 1464,
+     "lite": "West",
+     "liteMs": 1271,
+     "big": "West",
+     "bigMs": 3087
+    },
+    {
+     "type": "series-at",
+     "q": "Which series is highest in Feb? Give the series name.",
+     "a": "West",
+     "device": "North",
+     "deviceMs": 1491,
+     "lite": "West",
+     "liteMs": 1290,
+     "big": "West",
+     "bigMs": 2524
+    }
+   ]
+  },
+  {
+   "id": "h26",
+   "kind": "line-chart",
+   "q": [
+    {
+     "type": "trend",
+     "q": "Which series rose the most from Jan to Jun? Give the series name.",
+     "a": "West",
+     "device": "West",
+     "deviceMs": 1557,
+     "lite": "West",
+     "liteMs": 1365,
+     "big": "West",
+     "bigMs": 2490
+    },
+    {
+     "type": "series-at",
+     "q": "Which series is highest in Jun? Give the series name.",
+     "a": "West",
+     "device": "West",
+     "deviceMs": 1433,
+     "lite": "West",
+     "liteMs": 1357,
+     "big": "West",
+     "bigMs": 2696
+    }
+   ]
+  },
+  {
+   "id": "h27",
+   "kind": "line-chart",
+   "q": [
+    {
+     "type": "trend",
+     "q": "Which series rose the most from Jan to Jun? Give the series name.",
+     "a": "North",
+     "device": "North",
+     "deviceMs": 1502,
+     "lite": "North",
+     "liteMs": 1337,
+     "big": "North",
+     "bigMs": 3591
+    },
+    {
+     "type": "series-at",
+     "q": "Which series is highest in Jun? Give the series name.",
+     "a": "North",
+     "device": "North",
+     "deviceMs": 1502,
+     "lite": "North",
+     "liteMs": 1365,
+     "big": "North",
+     "bigMs": 3174
+    }
+   ]
+  },
+  {
+   "id": "h28",
+   "kind": "line-chart",
+   "q": [
+    {
+     "type": "trend",
+     "q": "Which series rose the most from Jan to Jun? Give the series name.",
+     "a": "West",
+     "device": "North",
+     "deviceMs": 1406,
+     "lite": "West",
+     "liteMs": 1367,
+     "big": "West",
+     "bigMs": 3075
+    },
+    {
+     "type": "series-at",
+     "q": "Which series is highest in May? Give the series name.",
+     "a": "North",
+     "device": "North",
+     "deviceMs": 1363,
+     "lite": "North",
+     "liteMs": 1387,
+     "big": "North",
+     "bigMs": 2734
+    }
+   ]
+  },
+  {
+   "id": "h29",
+   "kind": "line-chart",
+   "q": [
+    {
+     "type": "trend",
+     "q": "Which series rose the most from Jan to Jun? Give the series name.",
+     "a": "West",
+     "device": "South",
+     "deviceMs": 1451,
+     "lite": "North",
+     "liteMs": 1407,
+     "big": "West",
+     "bigMs": 8421
+    },
+    {
+     "type": "series-at",
+     "q": "Which series is highest in Mar? Give the series name.",
+     "a": "North",
+     "device": "South",
+     "deviceMs": 1382,
+     "lite": "North",
+     "liteMs": 1413,
+     "big": "North",
+     "bigMs": 3462
+    }
+   ]
+  },
+  {
+   "id": "h30",
+   "kind": "line-chart",
+   "q": [
+    {
+     "type": "trend",
+     "q": "Which series rose the most from Jan to Jun? Give the series name.",
+     "a": "South",
+     "device": "South",
+     "deviceMs": 1522,
+     "lite": "North",
+     "liteMs": 1313,
+     "big": "South",
+     "bigMs": 3582
+    },
+    {
+     "type": "series-at",
+     "q": "Which series is highest in Jan? Give the series name.",
+     "a": "South",
+     "device": "South",
+     "deviceMs": 855,
+     "lite": "South",
+     "liteMs": 1312,
+     "big": "South",
+     "bigMs": 3079
+    }
+   ]
+  },
+  {
+   "id": "h31",
+   "kind": "flow",
+   "q": [
+    {
+     "type": "next",
+     "q": "Following the arrows, which step comes right after Triage?",
+     "a": "Assign",
+     "device": "Assign",
+     "deviceMs": 461,
+     "lite": "Assign",
+     "liteMs": 1289,
+     "big": "Assign",
+     "bigMs": 3169
+    },
+    {
+     "type": "last",
+     "q": "Following the arrows, which step is the last one?",
+     "a": "Review",
+     "device": "Review",
+     "deviceMs": 478,
+     "lite": "Review",
+     "liteMs": 1225,
+     "big": "Review",
+     "bigMs": 2599
+    }
+   ]
+  },
+  {
+   "id": "h32",
+   "kind": "flow",
+   "q": [
+    {
+     "type": "next",
+     "q": "Following the arrows, which step comes right after Legal check?",
+     "a": "Pricing",
+     "device": "Approval",
+     "deviceMs": 461,
+     "lite": "Approval",
+     "liteMs": 1273,
+     "big": "Pricing",
+     "bigMs": 3439
+    },
+    {
+     "type": "last",
+     "q": "Following the arrows, which step is the last one?",
+     "a": "Publish",
+     "device": "Publish",
+     "deviceMs": 477,
+     "lite": "Publish",
+     "liteMs": 1411,
+     "big": "Publish",
+     "bigMs": 2762
+    }
+   ]
+  },
+  {
+   "id": "h33",
+   "kind": "flow",
+   "q": [
+    {
+     "type": "next",
+     "q": "Following the arrows, which step comes right after Payment?",
+     "a": "Packing",
+     "device": "Packing",
+     "deviceMs": 448,
+     "lite": "Packing",
+     "liteMs": 1411,
+     "big": "Packing",
+     "bigMs": 3154
+    },
+    {
+     "type": "last",
+     "q": "Following the arrows, which step is the last one?",
+     "a": "Delivery",
+     "device": "Delivery",
+     "deviceMs": 448,
+     "lite": "Delivery",
+     "liteMs": 1524,
+     "big": "Delivery",
+     "bigMs": 3115
+    }
+   ]
+  },
+  {
+   "id": "h34",
+   "kind": "flow",
+   "q": [
+    {
+     "type": "next",
+     "q": "Following the arrows, which step comes right after Clean?",
+     "a": "Train",
+     "device": "Evaluate",
+     "deviceMs": 477,
+     "lite": "Train",
+     "liteMs": 1327,
+     "big": "Train",
+     "bigMs": 4777
+    },
+    {
+     "type": "last",
+     "q": "Following the arrows, which step is the last one?",
+     "a": "Deploy",
+     "device": "Deploy",
+     "deviceMs": 459,
+     "lite": "Deploy",
+     "liteMs": 1488,
+     "big": "Deploy",
+     "bigMs": 2663
+    }
+   ]
+  },
+  {
+   "id": "h35",
+   "kind": "flow",
+   "q": [
+    {
+     "type": "next",
+     "q": "Following the arrows, which step comes right after Screen?",
+     "a": "Interview",
+     "device": "Offer",
+     "deviceMs": 457,
+     "lite": "Interview",
+     "liteMs": 1618,
+     "big": "Interview",
+     "bigMs": 3663
+    },
+    {
+     "type": "last",
+     "q": "Following the arrows, which step is the last one?",
+     "a": "Onboard",
+     "device": "Onboard",
+     "deviceMs": 466,
+     "lite": "Onboard",
+     "liteMs": 1313,
+     "big": "Onboard",
+     "bigMs": 2910
+    }
+   ]
+  },
+  {
+   "id": "h36",
+   "kind": "flow",
+   "q": [
+    {
+     "type": "next",
+     "q": "Following the arrows, which step comes right after Page?",
+     "a": "Mitigate",
+     "device": "Recover",
+     "deviceMs": 466,
+     "lite": "Recover",
+     "liteMs": 1387,
+     "big": "Mitigate",
+     "bigMs": 3200
+    },
+    {
+     "type": "last",
+     "q": "Following the arrows, which step is the last one?",
+     "a": "Postmortem",
+     "device": "Postmortem",
+     "deviceMs": 497,
+     "lite": "Postmortem",
+     "liteMs": 1215,
+     "big": "Postmortem",
+     "bigMs": 3038
+    }
+   ]
+  }
+ ]
+}

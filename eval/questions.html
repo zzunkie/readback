@@ -1,0 +1,32 @@
+<!doctype html><meta charset="utf-8"><title>Readback: question evaluation</title><pre id="o">running…</pre>
+<script type="module">
+// Asks the 91 questions about the 36 hard slides of the on-device model and of two cloud models.
+import { ai } from '/src/firebase.js';
+import { getGenerativeModel, InferenceMode } from 'firebase/ai';
+{
+  const slides = await (await fetch('/eval/hard.json')).json();
+  const IMG = { expectedInputs: [{ type: 'image' }, { type: 'text', languages: ['en'] }] };
+  const ANS = { type: 'object', properties: { answer: { type: 'string' } }, required: ['answer'] };
+  const dev = getGenerativeModel(ai, { mode: InferenceMode.ONLY_ON_DEVICE, onDeviceParams: { createOptions: IMG, promptOptions: { responseConstraint: ANS } } });
+  const cloud = (model) => getGenerativeModel(ai, { mode: InferenceMode.ONLY_IN_CLOUD, inCloudParams: { model, generationConfig: { responseMimeType: 'application/json', responseSchema: ANS } } });
+  const lite = cloud('gemini-3.5-flash-lite'), big = cloud('gemini-4-hydrogen');
+  const b64 = async (id) => { const b = await (await fetch(`/eval/${id}.jpg`)).blob(); return await new Promise((r) => { const f = new FileReader(); f.onload = () => r(f.result.split(',')[1]); f.readAsDataURL(b); }); };
+  const json = (s) => { try { return JSON.parse(s.slice(s.indexOf('{'), s.lastIndexOf('}') + 1)).answer; } catch { return ''; } };
+  const time = async (m, parts) => { const t = performance.now(); let v; try { v = json((await m.generateContent(parts)).response.text()); } catch (e) { v = 'ERR ' + e.message; } return [v, Math.round(performance.now() - t)]; };
+  const out = []; window.__gate = { done: 0, out };
+  for (const s of slides) {
+    const img = { inlineData: { mimeType: 'image/jpeg', data: await b64(s.id) } }; const row = { id: s.id, kind: s.kind, q: [] };
+    for (const q of s.questions) {
+      const ask = `Look at this presentation slide and answer the question with the value or name only. ${q.q}`;
+      const [d, td] = await time(dev, [ask, img]); const [l, tl] = await time(lite, [ask, img]); const [h, th] = await time(big, [ask, img]);
+      row.q.push({ ...q, device: d, deviceMs: td, lite: l, liteMs: tl, big: h, bigMs: th });
+    }
+    out.push(row); window.__gate.done = out.length;
+  }
+  const num = (s) => parseFloat(String(s).replace(/[^0-9.]/g, '')); const n = (s) => String(s).toLowerCase().replace(/[^a-z0-9]/g, '');
+  const ok = (q, v) => ('tol' in q ? Math.abs(num(v) - +q.a) <= q.tol : n(v) === n(q.a) || (!['cell', 'sum'].includes(q.type) && n(v).includes(n(q.a))));
+  const all = out.flatMap((r) => r.q); const count = (k) => all.filter((q) => ok(q, q[k])).length;
+  window.__eval = { summary: { questions: all.length, onDevice: count('device'), flashLite: count('lite'), hydrogen: count('big') }, rows: out };
+  document.getElementById('o').textContent = JSON.stringify(window.__eval.summary, null, 1);
+}
+</script>

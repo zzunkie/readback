@@ -1,0 +1,190 @@
+{
+ "slides": [
+  "Third quarter review",
+  "What changed this quarter",
+  "Revenue by region, in millions of dollars",
+  "Weekly sign-ups after the pricing change",
+  "Support wait time by channel, in minutes",
+  "New refund process",
+  "Orders by office, January to August",
+  "Next steps"
+ ],
+ "orders": {
+  "offices": [
+   "Atlanta",
+   "Berlin",
+   "Chicago",
+   "Dublin",
+   "Edinburgh",
+   "Frankfurt",
+   "Geneva",
+   "Houston",
+   "Istanbul",
+   "Jakarta"
+  ],
+  "months": [
+   "Jan",
+   "Feb",
+   "Mar",
+   "Apr",
+   "May",
+   "Jun",
+   "Jul",
+   "Aug"
+  ],
+  "values": [
+   [
+    2618,
+    935,
+    5906,
+    3872,
+    8186,
+    574,
+    6624,
+    6964
+   ],
+   [
+    2316,
+    3801,
+    7670,
+    2635,
+    7162,
+    1789,
+    5620,
+    5533
+   ],
+   [
+    1590,
+    6295,
+    5357,
+    2638,
+    5565,
+    6143,
+    3747,
+    656
+   ],
+   [
+    1850,
+    6723,
+    3676,
+    8223,
+    8012,
+    3973,
+    5952,
+    3818
+   ],
+   [
+    816,
+    6459,
+    3130,
+    1960,
+    5934,
+    7651,
+    6885,
+    7591
+   ],
+   [
+    7106,
+    7694,
+    7153,
+    1595,
+    7821,
+    7647,
+    1622,
+    5035
+   ],
+   [
+    1245,
+    1193,
+    5184,
+    6108,
+    5638,
+    5548,
+    2457,
+    7500
+   ],
+   [
+    4210,
+    960,
+    1863,
+    5013,
+    2172,
+    7234,
+    5168,
+    1837
+   ],
+   [
+    3846,
+    494,
+    1768,
+    5254,
+    1874,
+    738,
+    1561,
+    3983
+   ],
+   [
+    3207,
+    6846,
+    1480,
+    937,
+    3258,
+    7977,
+    7714,
+    3676
+   ]
+  ]
+ },
+ "signups": [
+  [
+   "Week 1",
+   212
+  ],
+  [
+   "Week 2",
+   188
+  ],
+  [
+   "Week 3",
+   341
+  ],
+  [
+   "Week 4",
+   406
+  ],
+  [
+   "Week 5",
+   389
+  ],
+  [
+   "Week 6",
+   452
+  ]
+ ],
+ "wait": {
+  "Phone": [
+   18,
+   17,
+   21,
+   26,
+   24,
+   19
+  ],
+  "Chat": [
+   9,
+   8,
+   8,
+   7,
+   6,
+   5
+  ],
+  "Email": [
+   42,
+   40,
+   37,
+   30,
+   24,
+   22
+  ]
+ }
+}

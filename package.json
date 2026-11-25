@@ -1,0 +1,16 @@
+{
+  "name": "readback",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5184 --strictPort",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "firebase": "^13.3.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.8"
+  }
+}
