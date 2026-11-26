@@ -69,7 +69,7 @@ async function begin(kind) {
   main.innerHTML = `<h1 class="sr">Following the shared screen</h1><div class="live">
     <figure class="screen" style="margin:0"><video id="video" muted playsinline aria-hidden="true"></video><figcaption>${kind === 'sample' ? 'Sample meeting. It is read through the same capture as a real shared screen.' : 'The screen you are sharing with this tab. Frames stay on this device unless a badge says "Cloud".'}</figcaption>
       <div class="row" style="margin-top:14px"><button id="end">End and write notes</button><button id="again" class="ghost">Read this screen again</button><button id="pause" class="ghost" aria-pressed="false">Pause announcements</button></div>
-      <p class="keys">Keys: Alt+P pauses or resumes announcements, Alt+R reads the current screen again, Alt+Q moves to the question box, Escape stops the voice.</p>
+      <p class="keys">Shortcuts: Alt+P pauses or resumes announcements; Alt+R reads this screen again; Alt+Q moves focus to the question box; Escape stops speech.</p>
       <p class="saidbox" aria-hidden="true"><span>Last announcement</span><span id="said">None yet.</span></p>
       <p class="stats" id="stats"></p></figure>
     <div><section class="now" aria-labelledby="now-h"><h2 id="now-h">Current screen</h2><div id="now"><p>Waiting for the first screen.</p></div></section>
@@ -86,7 +86,7 @@ async function begin(kind) {
   $('#again').onclick = () => onChange({ kind: 'screen', frame: grab(video) });
   // While announcements are paused, screens are still read and listed, silently.
   state.paused = false;
-  $('#pause').onclick = () => { state.paused = !state.paused; if (state.paused) speechSynthesis?.cancel(); $('#pause').setAttribute('aria-pressed', String(state.paused)); $('#pause').textContent = state.paused ? 'Resume announcements' : 'Pause announcements'; say(state.paused ? 'Announcements paused. Screens are still being read.' : 'Announcements resumed.', { always: true, interrupt: true }); };
+  $('#pause').onclick = () => { state.paused = !state.paused; if (state.paused) speechSynthesis?.cancel(); $('#pause').setAttribute('aria-pressed', String(state.paused)); $('#pause').textContent = state.paused ? 'Resume announcements' : 'Pause announcements'; say(state.paused ? 'Announcements paused. New screens are still added to the list.' : 'Announcements resumed.', { always: true, interrupt: true }); };
   $('#ask').onsubmit = (e) => { e.preventDefault(); const q = $('#q').value.trim(); if (q) { $('#q').value = ''; question(q); } };
   say(kind === 'sample' ? 'Sample meeting started.' : 'Following the shared screen.');
 }
@@ -136,7 +136,7 @@ async function onChange({ kind, frame }) {
         // screen instead, so the person still gets its contents, without the structure.
         .catch(async (e) => {
           console.error(e); (window.__errors ||= []).push({ at: performance.now(), turn: 'detail', error: String(e) });
-          try { const body = await readLines(frame.base64, 'device'); count(body.source, frame.bytes); s.lines = body.lines.filter((l) => l !== s.title && /\p{L}|\d/u.test(l)); s.note = 'The cloud could not be reached, so this text was read on the device, without table structure.'; if (current()) say(`The cloud could not be reached. Read on this device: ${s.lines.join('. ')}`); }
+          try { const body = await readLines(frame.base64, 'device'); count(body.source, frame.bytes); s.lines = body.lines.filter((l) => l !== s.title && /\p{L}|\d/u.test(l)); s.note = 'Could not reach the cloud, so Gemini Nano read the visible text on this device as plain lines.'; if (current()) say(`Could not reach the cloud. Reading plain text on this device: ${s.lines.join('. ')}`); }
           catch { s.error = 'The cloud description did not arrive. Ask a question or press "Read this screen again".'; }
         })
         .finally(() => { s.detailPending = false; if ($('#now')) paint(); });
