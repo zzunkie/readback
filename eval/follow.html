@@ -7,8 +7,10 @@
 import { watch } from '/src/watch.js';
 import { readHeadWithFallback, warmUp } from '/src/models.js';
 const P = new URLSearchParams(location.search); const where = P.get('where') || 'device';
-const slides = (await (await fetch('/eval/slides.json')).json()).slice(0, +(P.get('n') || 999));
-const img = (id) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.src = `/eval/${id}.jpg`; });
+// ?set=real plays the real web screens in public/eval/real instead of the test slides.
+const dir = P.get('set') === 'real' ? '/eval/real/' : '/eval/';
+const slides = (await (await fetch(`${dir}${P.get('set') === 'real' ? 'real' : 'slides'}.json`)).json()).slice(0, +(P.get('n') || 999));
+const img = (id) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.src = `${dir}${id}.jpg`; });
 const images = []; for (const s of slides) images.push(await img(s.id));
 if (where === 'device') await warmUp();
 const canvas = document.createElement('canvas'); canvas.width = 1280; canvas.height = 720; const ctx = canvas.getContext('2d');

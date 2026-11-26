@@ -1,0 +1,206 @@
+{
+ "summary": {
+  "questions": 14,
+  "onDevice": 10,
+  "flashLite": 13,
+  "hydrogen": 13
+ },
+ "rows": [
+  {
+   "id": "r01",
+   "kind": "table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"China\" in the column \"UN statistical subregion\"?",
+     "a": "Eastern Asia",
+     "device": "Eastern Asia",
+     "deviceMs": 25411,
+     "lite": "Eastern Asia",
+     "liteMs": 2608,
+     "big": "Eastern Asia",
+     "bigMs": 3891
+    },
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"Pakistan\" in the column \"Population (1 July 2022)\"?",
+     "a": "243,700,667",
+     "device": "243,700,667",
+     "deviceMs": 2367,
+     "lite": "243,700,667",
+     "liteMs": 1503,
+     "big": "243,700,667",
+     "bigMs": 3254
+    }
+   ]
+  },
+  {
+   "id": "r04",
+   "kind": "table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"China\" in the column \"United Nations (2024)\"?",
+     "a": "18,743,802",
+     "device": "18,743,802",
+     "deviceMs": 703,
+     "lite": "18,743,802",
+     "liteMs": 2155,
+     "big": "18,743,802",
+     "bigMs": 4682
+    },
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"United Kingdom\" in the column \"IMF (2026)\"?",
+     "a": "4,268,446",
+     "device": "3,685,881",
+     "deviceMs": 880,
+     "lite": "4,268,446",
+     "liteMs": 1062,
+     "big": "4,268,446",
+     "bigMs": 4029
+    }
+   ]
+  },
+  {
+   "id": "r05",
+   "kind": "table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"Tokyo Haneda Airport\" in the column \"% change\"?",
+     "a": "6.7%",
+     "device": "- 6.7%",
+     "deviceMs": 651,
+     "lite": "6.7%",
+     "liteMs": 1757,
+     "big": "6.7%",
+     "bigMs": 5310
+    },
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"O'Hare International Airport\" in the column \"Location\"?",
+     "a": "Chicago, Illinois",
+     "device": "Chicago, Illinois",
+     "deviceMs": 1168,
+     "lite": "Chicago, Illinois",
+     "liteMs": 1714,
+     "big": "Chicago, Illinois",
+     "bigMs": 3020
+    }
+   ]
+  },
+  {
+   "id": "r07",
+   "kind": "table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"The Alchemist (O Alquimista)\" in the column \"Genre\"?",
+     "a": "Fantasy",
+     "device": "Fantasy",
+     "deviceMs": 730,
+     "lite": "Fantasy",
+     "liteMs": 1588,
+     "big": "Fantasy",
+     "bigMs": 3768
+    },
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"Dream of the Red Chamber (紅樓夢)\" in the column \"Author(s)\"?",
+     "a": "Cao Xueqin",
+     "device": "Cao Xueqin",
+     "deviceMs": 1341,
+     "lite": "Cao Xueqin",
+     "liteMs": 1476,
+     "big": "Cao Xueqin",
+     "bigMs": 3671
+    }
+   ]
+  },
+  {
+   "id": "r08",
+   "kind": "table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"Armenia\" in the column \"Inauguration\"?",
+     "a": "1981",
+     "device": "1981",
+     "deviceMs": 923,
+     "lite": "1981",
+     "liteMs": 1599,
+     "big": "1981",
+     "bigMs": 3589
+    },
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"Azerbaijan\" in the column \"Systems\"?",
+     "a": "1",
+     "device": "1",
+     "deviceMs": 1130,
+     "lite": "1",
+     "liteMs": 1324,
+     "big": "1",
+     "bigMs": 3174
+    }
+   ]
+  },
+  {
+   "id": "r09",
+   "kind": "table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"Emperor Qin Shihuang’s Museum\" in the column \"Country\"?",
+     "a": "China",
+     "device": "China",
+     "deviceMs": 726,
+     "lite": "China",
+     "liteMs": 1615,
+     "big": "China",
+     "bigMs": 11658
+    },
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"Nanshan Museum\" in the column \"Visitors\"?",
+     "a": "7,455,000 (2025)",
+     "device": "7,455,000",
+     "deviceMs": 1262,
+     "lite": "7,455,000 (2025)[6]",
+     "liteMs": 1848,
+     "big": "7,455,000 (2025)[6]",
+     "bigMs": 4087
+    }
+   ]
+  },
+  {
+   "id": "r10",
+   "kind": "table",
+   "q": [
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"Lucid Air Sapphire\" in the column \"hide Noted specifications\"?",
+     "a": "Pirelli P Zero Trofeo RS Elect tires",
+     "device": " Pirelli P Zero Trofeo RS tires",
+     "deviceMs": 1017,
+     "lite": "Pirelli P Zero Trofeo RS Elect tires",
+     "liteMs": 1856,
+     "big": "Pirelli P Zero Trofeo RS Elect tires",
+     "bigMs": 3521
+    },
+    {
+     "type": "cell",
+     "q": "In the table, what is shown for \"Porsche 911 Turbo S (992.2)\" in the column \"Model year\"?",
+     "a": "2026",
+     "device": "2020",
+     "deviceMs": 727,
+     "lite": "2026",
+     "liteMs": 2765,
+     "big": "2026",
+     "bigMs": 3194
+    }
+   ]
+  }
+ ]
+}

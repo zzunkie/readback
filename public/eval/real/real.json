@@ -1,0 +1,578 @@
+[
+ {
+  "id": "r01",
+  "kind": "table",
+  "source": "Wikipedia",
+  "url": "https://en.wikipedia.org/wiki/List_of_countries_by_population_(United_Nations)",
+  "title": "List of countries and dependencies by population (United Nations)",
+  "titles": [
+   "List of countries and dependencies by population (United Nations)",
+   "List of countries and inhabited territories by total population. United Nations",
+   "Listedit"
+  ],
+  "questions": [
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"China\" in the column \"UN statistical subregion\"?",
+    "a": "Eastern Asia"
+   },
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"Pakistan\" in the column \"Population (1 July 2022)\"?",
+    "a": "243,700,667"
+   }
+  ],
+  "rows": 13,
+  "cols": 6
+ },
+ {
+  "id": "r02",
+  "kind": "table",
+  "source": "Wikipedia",
+  "url": "https://en.wikipedia.org/wiki/List_of_tallest_buildings",
+  "title": "List of tallest buildings",
+  "titles": [
+   "List of tallest buildings",
+   "Height to pinnacle (highest point)"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r03",
+  "kind": "table",
+  "source": "Wikipedia",
+  "url": "https://en.wikipedia.org/wiki/List_of_rivers_by_length",
+  "title": "List of river systems by length",
+  "titles": [
+   "List of river systems by length",
+   "List of river systems longer than 1,000 kmedit"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r04",
+  "kind": "table",
+  "source": "Wikipedia",
+  "url": "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)",
+  "title": "List of countries by GDP (nominal)",
+  "titles": [
+   "List of countries by GDP (nominal)",
+   "GDP forecast or estimate (million US$) by country",
+   "Table"
+  ],
+  "questions": [
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"China\" in the column \"United Nations (2024)\"?",
+    "a": "18,743,802"
+   },
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"United Kingdom\" in the column \"IMF (2026)\"?",
+    "a": "4,268,446"
+   }
+  ],
+  "rows": 16,
+  "cols": 4
+ },
+ {
+  "id": "r05",
+  "kind": "table",
+  "source": "Wikipedia",
+  "url": "https://en.wikipedia.org/wiki/List_of_busiest_airports_by_passenger_traffic",
+  "title": "List of busiest airports by passenger traffic",
+  "titles": [
+   "List of busiest airports by passenger traffic",
+   "2025 statisticsedit"
+  ],
+  "questions": [
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"Tokyo Haneda Airport\" in the column \"% change\"?",
+    "a": "6.7%"
+   },
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"O'Hare International Airport\" in the column \"Location\"?",
+    "a": "Chicago, Illinois"
+   }
+  ],
+  "rows": 6,
+  "cols": 8
+ },
+ {
+  "id": "r06",
+  "kind": "table",
+  "source": "Wikipedia",
+  "url": "https://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy",
+  "title": "List of countries by life expectancy",
+  "titles": [
+   "List of countries by life expectancy",
+   "CIA World Factbook (2024). All, male, female, and sex gap."
+  ],
+  "questions": []
+ },
+ {
+  "id": "r07",
+  "kind": "table",
+  "source": "Wikipedia",
+  "url": "https://en.wikipedia.org/wiki/List_of_best-selling_books",
+  "title": "List of best-selling books",
+  "titles": [
+   "List of best-selling books",
+   "More than 100 million copiesedit"
+  ],
+  "questions": [
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"The Alchemist (O Alquimista)\" in the column \"Genre\"?",
+    "a": "Fantasy"
+   },
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"Dream of the Red Chamber (紅樓夢)\" in the column \"Author(s)\"?",
+    "a": "Cao Xueqin"
+   }
+  ],
+  "rows": 8,
+  "cols": 6
+ },
+ {
+  "id": "r08",
+  "kind": "table",
+  "source": "Wikipedia",
+  "url": "https://en.wikipedia.org/wiki/List_of_metro_systems",
+  "title": "List of metro systems",
+  "titles": [
+   "List of metro systems",
+   "List by countriesedit"
+  ],
+  "questions": [
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"Armenia\" in the column \"Inauguration\"?",
+    "a": "1981"
+   },
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"Azerbaijan\" in the column \"Systems\"?",
+    "a": "1"
+   }
+  ],
+  "rows": 8,
+  "cols": 7
+ },
+ {
+  "id": "r09",
+  "kind": "table",
+  "source": "Wikipedia",
+  "url": "https://en.wikipedia.org/wiki/List_of_most_visited_museums",
+  "title": "List of most-visited museums",
+  "titles": [
+   "List of most-visited museums",
+   "List of most-visited museumsedit"
+  ],
+  "questions": [
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"Emperor Qin Shihuang’s Museum\" in the column \"Country\"?",
+    "a": "China"
+   },
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"Nanshan Museum\" in the column \"Visitors\"?",
+    "a": "7,455,000 (2025)"
+   }
+  ],
+  "rows": 9,
+  "cols": 4
+ },
+ {
+  "id": "r10",
+  "kind": "table",
+  "source": "Wikipedia",
+  "url": "https://en.wikipedia.org/wiki/List_of_fastest_production_cars_by_acceleration",
+  "title": "List of fastest production cars by acceleration",
+  "titles": [
+   "List of fastest production cars by acceleration",
+   "By 0–60 mph (97 km/h) (less than 3.0 s)edit"
+  ],
+  "questions": [
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"Lucid Air Sapphire\" in the column \"hide Noted specifications\"?",
+    "a": "Pirelli P Zero Trofeo RS Elect tires"
+   },
+   {
+    "type": "cell",
+    "q": "In the table, what is shown for \"Porsche 911 Turbo S (992.2)\" in the column \"Model year\"?",
+    "a": "2026"
+   }
+  ],
+  "rows": 11,
+  "cols": 6
+ },
+ {
+  "id": "r11",
+  "kind": "code",
+  "source": "GitHub",
+  "url": "https://github.com/nodejs/node/blob/main/lib/path.js",
+  "title": "path.js",
+  "titles": [
+   "path.js"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r12",
+  "kind": "code",
+  "source": "GitHub",
+  "url": "https://github.com/pallets/flask/blob/main/src/flask/app.py",
+  "title": "app.py",
+  "titles": [
+   "app.py"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r13",
+  "kind": "code",
+  "source": "GitHub",
+  "url": "https://github.com/golang/go/blob/master/src/strings/strings.go",
+  "title": "strings.go",
+  "titles": [
+   "strings.go"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r14",
+  "kind": "code",
+  "source": "GitHub",
+  "url": "https://github.com/expressjs/express/blob/master/lib/application.js",
+  "title": "application.js",
+  "titles": [
+   "application.js"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r15",
+  "kind": "code",
+  "source": "GitHub",
+  "url": "https://github.com/django/django/blob/main/django/http/response.py",
+  "title": "response.py",
+  "titles": [
+   "response.py"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r16",
+  "kind": "code",
+  "source": "GitHub",
+  "url": "https://github.com/rust-lang/rust/blob/master/library/core/src/option.rs",
+  "title": "option.rs",
+  "titles": [
+   "option.rs"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r17",
+  "kind": "code",
+  "source": "GitHub",
+  "url": "https://github.com/psf/requests/blob/main/src/requests/api.py",
+  "title": "api.py",
+  "titles": [
+   "api.py"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r18",
+  "kind": "code",
+  "source": "GitHub",
+  "url": "https://github.com/numpy/numpy/blob/main/numpy/lib/_shape_base_impl.py",
+  "title": "_shape_base_impl.py",
+  "titles": [
+   "_shape_base_impl.py"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r19",
+  "kind": "code",
+  "source": "GitHub",
+  "url": "https://github.com/vuejs/core/blob/main/packages/reactivity/src/ref.ts",
+  "title": "ref.ts",
+  "titles": [
+   "ref.ts"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r20",
+  "kind": "table",
+  "source": "GitHub CSV",
+  "url": "https://github.com/datasets/population/blob/main/data/population.csv",
+  "title": "population.csv",
+  "titles": [
+   "population.csv"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r21",
+  "kind": "table",
+  "source": "GitHub CSV",
+  "url": "https://github.com/datasets/gdp/blob/main/data/gdp.csv",
+  "title": "gdp.csv",
+  "titles": [
+   "gdp.csv"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r22",
+  "kind": "table",
+  "source": "GitHub CSV",
+  "url": "https://github.com/datasets/country-codes/blob/main/data/country-codes.csv",
+  "title": "country-codes.csv",
+  "titles": [
+   "country-codes.csv"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r23",
+  "kind": "table",
+  "source": "GitHub CSV",
+  "url": "https://github.com/datasets/airport-codes/blob/main/data/airport-codes.csv",
+  "title": "airport-codes.csv",
+  "titles": [
+   "airport-codes.csv"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r24",
+  "kind": "table",
+  "source": "GitHub CSV",
+  "url": "https://github.com/datasets/co2-fossil-global/blob/main/data/global.csv",
+  "title": "global.csv",
+  "titles": [
+   "global.csv"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r25",
+  "kind": "table",
+  "source": "GitHub CSV",
+  "url": "https://github.com/datasets/gold-prices/blob/main/data/annual.csv",
+  "title": "annual.csv",
+  "titles": [
+   "annual.csv"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r26",
+  "kind": "table",
+  "source": "GitHub CSV",
+  "url": "https://github.com/datasets/world-cities/blob/main/data/world-cities.csv",
+  "title": "world-cities.csv",
+  "titles": [
+   "world-cities.csv"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r27",
+  "kind": "table",
+  "source": "GitHub CSV",
+  "url": "https://github.com/datasets/s-and-p-500-companies/blob/main/data/constituents.csv",
+  "title": "constituents.csv",
+  "titles": [
+   "constituents.csv"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r28",
+  "kind": "text",
+  "source": "MDN",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch",
+  "title": "Using the Fetch API",
+  "titles": [
+   "Using the Fetch API"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r29",
+  "kind": "text",
+  "source": "MDN",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching",
+  "title": "HTTP caching",
+  "titles": [
+   "HTTP caching"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r30",
+  "kind": "text",
+  "source": "MDN",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises",
+  "title": "Using promises",
+  "titles": [
+   "Using promises"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r31",
+  "kind": "text",
+  "source": "MDN",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout",
+  "title": "Basic concepts of grid layout",
+  "titles": [
+   "Basic concepts of grid layout"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r32",
+  "kind": "text",
+  "source": "MDN",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions",
+  "title": "ARIA live regions",
+  "titles": [
+   "ARIA live regions"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r33",
+  "kind": "text",
+  "source": "MDN",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture",
+  "title": "Using the Screen Capture API",
+  "titles": [
+   "Using the Screen Capture API"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r34",
+  "kind": "text",
+  "source": "MDN",
+  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images",
+  "title": "Using responsive images in HTML",
+  "titles": [
+   "Using responsive images in HTML"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r35",
+  "kind": "text",
+  "source": "MDN",
+  "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility",
+  "title": "What is accessibility?",
+  "titles": [
+   "What is accessibility?"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r36",
+  "kind": "chart",
+  "source": "Our World in Data",
+  "url": "https://ourworldindata.org/grapher/life-expectancy?tab=chart",
+  "title": "Life expectancy",
+  "titles": [
+   "Life expectancy"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r37",
+  "kind": "chart",
+  "source": "Our World in Data",
+  "url": "https://ourworldindata.org/grapher/co-emissions-per-capita?tab=chart",
+  "title": "CO₂ emissions per capita",
+  "titles": [
+   "CO₂ emissions per capita"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r38",
+  "kind": "chart",
+  "source": "Our World in Data",
+  "url": "https://ourworldindata.org/grapher/share-of-individuals-using-the-internet?tab=chart",
+  "title": "Share of the population using the Internet",
+  "titles": [
+   "Share of the population using the Internet"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r39",
+  "kind": "chart",
+  "source": "Our World in Data",
+  "url": "https://ourworldindata.org/grapher/child-mortality?tab=chart",
+  "title": "Child mortality rate",
+  "titles": [
+   "Child mortality rate"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r40",
+  "kind": "chart",
+  "source": "Our World in Data",
+  "url": "https://ourworldindata.org/grapher/gdp-per-capita-worldbank?tab=chart",
+  "title": "GDP per capita",
+  "titles": [
+   "GDP per capita"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r41",
+  "kind": "chart",
+  "source": "Our World in Data",
+  "url": "https://ourworldindata.org/grapher/share-electricity-renewables?tab=chart",
+  "title": "Electricity mix",
+  "titles": [
+   "Electricity mix"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r42",
+  "kind": "chart",
+  "source": "Our World in Data",
+  "url": "https://ourworldindata.org/grapher/population?tab=chart",
+  "title": "Population10,000 BCE to 2023",
+  "titles": [
+   "Population10,000 BCE to 2023"
+  ],
+  "questions": []
+ },
+ {
+  "id": "r43",
+  "kind": "chart",
+  "source": "Our World in Data",
+  "url": "https://ourworldindata.org/grapher/literacy-rate-adults?tab=chart",
+  "title": "Literacy rates",
+  "titles": [
+   "Literacy rates"
+  ],
+  "questions": []
+ }
+]

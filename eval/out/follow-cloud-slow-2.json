@@ -1,0 +1,472 @@
+{
+ "summary": {
+  "where": "cloud",
+  "slides": 30,
+  "announced": 30,
+  "missed": 0,
+  "falseAnnouncements": 0,
+  "titleRight": 30,
+  "detectMs": {
+   "median": 996,
+   "p90": 1108
+  },
+  "announceMs": {
+   "median": 3486,
+   "p90": 4129
+  },
+  "readInCloudAfterStall": 0,
+  "uploadedMB": 1.1
+ },
+ "rows": [
+  {
+   "id": "s01",
+   "kind": "bullets",
+   "title": "Q3 revenue by region",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 1064,
+     "readMs": 3586,
+     "title": "Q3 revenue by region",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s02",
+   "kind": "bullets",
+   "title": "Hiring plan for 2027",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 988,
+     "readMs": 3267,
+     "title": "Hiring plan for 2027",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s03",
+   "kind": "bullets",
+   "title": "Why checkout conversion dropped",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 1086,
+     "readMs": 3731,
+     "title": "Why checkout conversion dropped",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s04",
+   "kind": "bullets",
+   "title": "Migration timeline",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1065,
+     "readMs": 3595,
+     "title": "Migration timeline",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s05",
+   "kind": "bullets",
+   "title": "Customer support backlog",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 1013,
+     "readMs": 3455,
+     "title": "Customer support backlog",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s06",
+   "kind": "bullets",
+   "title": "Course overview: Statistics 201",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 932,
+     "readMs": 3486,
+     "title": "Course overview: Statistics 201",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s07",
+   "kind": "bullets",
+   "title": "Security review findings",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 903,
+     "readMs": 3105,
+     "title": "Security review findings",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s08",
+   "kind": "bullets",
+   "title": "Marketing budget reallocation",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 1009,
+     "readMs": 3760,
+     "title": "Marketing budget reallocation",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s09",
+   "kind": "bullets",
+   "title": "Onboarding redesign goals",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 742,
+     "readMs": 3293,
+     "title": "Onboarding redesign goals",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "kind": "bullets",
+   "title": "Supply chain risks",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 978,
+     "readMs": 3498,
+     "title": "Supply chain risks",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "kind": "bullets",
+   "title": "Lecture 8: Photosynthesis",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 918,
+     "readMs": 3222,
+     "title": "Lecture 8: Photosynthesis",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "kind": "bullets",
+   "title": "Roadmap priorities",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 848,
+     "readMs": 3636,
+     "title": "Roadmap priorities",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "kind": "bullets",
+   "title": "Incident review: November 12 outage",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 974,
+     "readMs": 3233,
+     "title": "Incident review: November 12 outage",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "kind": "bullets",
+   "title": "Team survey results",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 996,
+     "readMs": 3415,
+     "title": "Team survey results",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "kind": "bullets",
+   "title": "Pricing experiment",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 897,
+     "readMs": 3315,
+     "title": "Pricing experiment",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "kind": "bullets",
+   "title": "Accessibility audit summary",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 1109,
+     "readMs": 3628,
+     "title": "Accessibility audit summary",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "kind": "bullets",
+   "title": "Research methods",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 794,
+     "readMs": 2978,
+     "title": "Research methods",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "kind": "bullets",
+   "title": "Next steps",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 1097,
+     "readMs": 3447,
+     "title": "Next steps",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "kind": "bullets",
+   "title": "Energy use by building",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1045,
+     "readMs": 3320,
+     "title": "Energy use by building",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "kind": "bullets",
+   "title": "Launch checklist",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 1062,
+     "readMs": 3386,
+     "title": "Launch checklist",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "kind": "table",
+   "title": "Revenue by region, in millions of dollars",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 1046,
+     "readMs": 4383,
+     "title": "Revenue by region, in millions of dollars",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "kind": "table",
+   "title": "Support tickets by category",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1080,
+     "readMs": 3545,
+     "title": "Support tickets by category",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "kind": "table",
+   "title": "Headcount by department",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 920,
+     "readMs": 4001,
+     "title": "Headcount by department",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "kind": "table",
+   "title": "Monthly active users by plan",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 901,
+     "readMs": 3259,
+     "title": "Monthly active users by plan",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s25",
+   "kind": "table",
+   "title": "Exam scores by section",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 1005,
+     "readMs": 3621,
+     "title": "Exam scores by section",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s26",
+   "kind": "table",
+   "title": "Energy use in megawatt hours",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 868,
+     "readMs": 3334,
+     "title": "Energy use in megawatt hours",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s27",
+   "kind": "table",
+   "title": "Conversion rate by channel, percent",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1143,
+     "readMs": 4259,
+     "title": "Conversion rate by channel, percent",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s28",
+   "kind": "table",
+   "title": "Shipping delays by carrier, in days",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 897,
+     "readMs": 4129,
+     "title": "Shipping delays by carrier, in days",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s29",
+   "kind": "table",
+   "title": "Budget versus actual, in thousands",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 840,
+     "readMs": 3281,
+     "title": "Budget versus actual, in thousands",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "s30",
+   "kind": "table",
+   "title": "Bug counts by severity",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 1108,
+     "readMs": 3632,
+     "title": "Bug counts by severity",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  }
+ ]
+}

@@ -21,9 +21,9 @@
 // A stand-in for a meeting tab: one participant shares slides. This page has no model and no
 // connection to Readback; it only shows pictures. ?step=14 sets the seconds per slide; the right
 // and left arrow keys move by hand. window.__show(n) jumps to slide n.
-const files = ['s1', 's2a', 's2', 's3', 's4', 's5', 's6', 's7', 's8']; const n = files.length; let i = 1; const img = document.getElementById('slide');
+const files = ['s1', 's2a', 's2', 's3', 's4', 's6', 's5', 's7', 's8']; const n = files.length; let i = 1; const img = document.getElementById('slide');
 window.__show = (k) => { i = Math.max(1, Math.min(n, k)); img.src = `/sample/${files[i - 1]}.jpg`; };
 addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') __show(i + 1); if (e.key === 'ArrowLeft') __show(i - 1); });
 const step = +new URLSearchParams(location.search).get('step'); if (step) setInterval(() => { if (i < n) __show(i + 1); }, step * 1000);
-setInterval(() => { document.getElementById('clock').textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); }, 1000);
+setInterval(() => { document.getElementById('clock').textContent = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }); }, 1000);
 </script></body></html>

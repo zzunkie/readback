@@ -1,0 +1,667 @@
+{
+ "summary": {
+  "where": "cloud",
+  "slides": 43,
+  "announced": 43,
+  "missed": 0,
+  "falseAnnouncements": 0,
+  "titleRight": 16,
+  "detectMs": {
+   "median": 986,
+   "p90": 1065
+  },
+  "announceMs": {
+   "median": 2802,
+   "p90": 3139
+  },
+  "readInCloudAfterStall": 0,
+  "uploadedMB": 4.9
+ },
+ "rows": [
+  {
+   "id": "r01",
+   "kind": "table",
+   "title": "List of countries and dependencies by population (United Nations)",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 1060,
+     "readMs": 3164,
+     "title": "List of countries and inhabited territories by total population. United Nations",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r02",
+   "kind": "table",
+   "title": "List of tallest buildings",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 986,
+     "readMs": 3012,
+     "title": "Contents",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r03",
+   "kind": "table",
+   "title": "List of river systems by length",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 1083,
+     "readMs": 3085,
+     "title": "List of river systems longer than 1,000 km",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r04",
+   "kind": "table",
+   "title": "List of countries by GDP (nominal)",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1053,
+     "readMs": 3282,
+     "title": "GDP forecast or estimate (million US$) by country",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r05",
+   "kind": "table",
+   "title": "List of busiest airports by passenger traffic",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 996,
+     "readMs": 2884,
+     "title": "2025 statistics",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r06",
+   "kind": "table",
+   "title": "List of countries by life expectancy",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 905,
+     "readMs": 2500,
+     "title": "CIA World Factbook (2024)",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r07",
+   "kind": "table",
+   "title": "List of best-selling books",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 863,
+     "readMs": 2464,
+     "title": "More than 100 million copies",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r08",
+   "kind": "table",
+   "title": "List of metro systems",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 977,
+     "readMs": 2796,
+     "title": "List by countries",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r09",
+   "kind": "table",
+   "title": "List of most-visited museums",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1065,
+     "readMs": 2778,
+     "title": "List of most-visited museums",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r10",
+   "kind": "table",
+   "title": "List of fastest production cars by acceleration",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 953,
+     "readMs": 3026,
+     "title": "",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r11",
+   "kind": "code",
+   "title": "path.js",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 888,
+     "readMs": 2743,
+     "title": "node / lib / path.js",
+     "kindRead": "code",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r12",
+   "kind": "code",
+   "title": "app.py",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 821,
+     "readMs": 2692,
+     "title": "app.py",
+     "kindRead": "code",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r13",
+   "kind": "code",
+   "title": "strings.go",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 944,
+     "readMs": 2925,
+     "title": "golang / go",
+     "kindRead": "code",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r14",
+   "kind": "code",
+   "title": "application.js",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 954,
+     "readMs": 3121,
+     "title": "express / lib / application.js",
+     "kindRead": "code",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r15",
+   "kind": "code",
+   "title": "response.py",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 851,
+     "readMs": 2584,
+     "title": "django / django / http / response.py",
+     "kindRead": "code",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r16",
+   "kind": "code",
+   "title": "option.rs",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1057,
+     "readMs": 3019,
+     "title": "rust-lang / rust",
+     "kindRead": "code",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r17",
+   "kind": "code",
+   "title": "api.py",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 742,
+     "readMs": 2434,
+     "title": "requests / src / requests / api.py",
+     "kindRead": "code",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r18",
+   "kind": "code",
+   "title": "_shape_base_impl.py",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1049,
+     "readMs": 2885,
+     "title": "numpy / numpy / lib / _shape_base_impl.py",
+     "kindRead": "code",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r19",
+   "kind": "code",
+   "title": "ref.ts",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1016,
+     "readMs": 2783,
+     "title": "vuejs / core",
+     "kindRead": "code",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r20",
+   "kind": "table",
+   "title": "population.csv",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1029,
+     "readMs": 2655,
+     "title": "population.csv",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r21",
+   "kind": "table",
+   "title": "gdp.csv",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1011,
+     "readMs": 2747,
+     "title": "gdp / data / gdp.csv",
+     "kindRead": "code",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r22",
+   "kind": "table",
+   "title": "country-codes.csv",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1049,
+     "readMs": 2858,
+     "title": "country-codes / data / country-codes.csv",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r23",
+   "kind": "table",
+   "title": "airport-codes.csv",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 887,
+     "readMs": 2528,
+     "title": "datasets / airport-codes",
+     "kindRead": "other",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r24",
+   "kind": "table",
+   "title": "global.csv",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1408,
+     "readMs": 3100,
+     "title": "co2-fossil-global / data / global.csv",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r25",
+   "kind": "table",
+   "title": "annual.csv",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 809,
+     "readMs": 3139,
+     "title": "gold-prices / data / annual.csv",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r26",
+   "kind": "table",
+   "title": "world-cities.csv",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1020,
+     "readMs": 3279,
+     "title": "world-cities / data / world-cities.csv",
+     "kindRead": "code",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r27",
+   "kind": "table",
+   "title": "constituents.csv",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 945,
+     "readMs": 2585,
+     "title": "s-and-p-500-companies / data / constituents.csv",
+     "kindRead": "table",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r28",
+   "kind": "text",
+   "title": "Using the Fetch API",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 1045,
+     "readMs": 2677,
+     "title": "Using the Fetch API",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r29",
+   "kind": "text",
+   "title": "HTTP caching",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 977,
+     "readMs": 2802,
+     "title": "HTTP caching",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r30",
+   "kind": "text",
+   "title": "Using promises",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 889,
+     "readMs": 2682,
+     "title": "Using promises",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r31",
+   "kind": "text",
+   "title": "Basic concepts of grid layout",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1010,
+     "readMs": 2961,
+     "title": "Basic concepts of grid layout",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r32",
+   "kind": "text",
+   "title": "ARIA live regions",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 805,
+     "readMs": 2628,
+     "title": "ARIA live regions",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r33",
+   "kind": "text",
+   "title": "Using the Screen Capture API",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 862,
+     "readMs": 2597,
+     "title": "Using the Screen Capture API",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r34",
+   "kind": "text",
+   "title": "Using responsive images in HTML",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 949,
+     "readMs": 3484,
+     "title": "Using responsive images in HTML",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r35",
+   "kind": "text",
+   "title": "What is accessibility?",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1025,
+     "readMs": 2796,
+     "title": "What is accessibility?",
+     "kindRead": "text",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r36",
+   "kind": "chart",
+   "title": "Life expectancy",
+   "events": [
+    {
+     "kind": "screen",
+     "detectMs": 938,
+     "readMs": 3078,
+     "title": "Life expectancy",
+     "kindRead": "chart",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r37",
+   "kind": "chart",
+   "title": "CO₂ emissions per capita",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 884,
+     "readMs": 2971,
+     "title": "CO2 emissions per capita",
+     "kindRead": "chart",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r38",
+   "kind": "chart",
+   "title": "Share of the population using the Internet",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1033,
+     "readMs": 2706,
+     "title": "Share of the population using the Internet",
+     "kindRead": "chart",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r39",
+   "kind": "chart",
+   "title": "Child mortality rate",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 898,
+     "readMs": 3013,
+     "title": "Child mortality rate",
+     "kindRead": "chart",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r40",
+   "kind": "chart",
+   "title": "GDP per capita",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1059,
+     "readMs": 2793,
+     "title": "GDP per capita",
+     "kindRead": "chart",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r41",
+   "kind": "chart",
+   "title": "Electricity mix",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1027,
+     "readMs": 2862,
+     "title": "Share of electricity generation from renewables",
+     "kindRead": "chart",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r42",
+   "kind": "chart",
+   "title": "Population10,000 BCE to 2023",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1094,
+     "readMs": 2994,
+     "title": "Population 10,000 BCE to 2023",
+     "kindRead": "chart",
+     "late": false
+    }
+   ]
+  },
+  {
+   "id": "r43",
+   "kind": "chart",
+   "title": "Literacy rates",
+   "events": [
+    {
+     "kind": "update",
+     "detectMs": 1089,
+     "readMs": 2750,
+     "title": "Literacy rates among adults",
+     "kindRead": "chart",
+     "late": false
+    }
+   ]
+  }
+ ]
+}

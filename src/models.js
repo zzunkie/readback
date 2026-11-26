@@ -10,6 +10,9 @@ const IMAGE_INPUT = { expectedInputs: [{ type: 'image' }, { type: 'text', langua
 const image = (base64) => ({ inlineData: { mimeType: 'image/jpeg', data: base64 } });
 const parse = (raw) => JSON.parse(raw.slice(raw.indexOf('{'), raw.lastIndexOf('}') + 1));
 const within = (promise, seconds) => Promise.race([promise, new Promise((_, no) => setTimeout(() => no(new Error('timeout')), seconds * 1000))]);
+// A signal that fires after `seconds` or when `outer` fires, so a read that is no longer wanted
+// (time ran out, or the presenter moved on) stops occupying the on-device model.
+const limit = (seconds, outer) => { const c = new AbortController(); const t = setTimeout(() => c.abort(), seconds * 1000); if (outer) { if (outer.aborted) c.abort(); else outer.addEventListener('abort', () => c.abort(), { once: true }); } c.signal.addEventListener('abort', () => clearTimeout(t), { once: true }); return c; };
 
 // 'available' | 'downloadable' | 'downloading' | 'unavailable'
 export async function deviceStatus() {
@@ -35,9 +38,9 @@ const LINES_SCHEMA = {
 
 // mode 'device': the frame never leaves the machine. mode 'cloud': used only when the browser
 // has no on-device model and the person agreed to send frames.
-const reader = (schema, where) => getGenerativeModel(ai, {
+const reader = (schema, where, signal) => getGenerativeModel(ai, {
   mode: where === 'cloud' ? InferenceMode.ONLY_IN_CLOUD : InferenceMode.ONLY_ON_DEVICE,
-  onDeviceParams: { createOptions: IMAGE_INPUT, promptOptions: { responseConstraint: schema } },
+  onDeviceParams: { createOptions: IMAGE_INPUT, promptOptions: { responseConstraint: schema, signal } },
   inCloudParams: { model: FAST_MODEL, generationConfig: { responseMimeType: 'application/json', responseSchema: schema } },
 }, { timeout: 30000 });
 
@@ -50,19 +53,21 @@ export async function warmUp() {
 
 // The on-device model occasionally stalls on a call. A screen that gets no answer in eight seconds
 // is read by the cloud model instead, so the person is never left without an announcement.
-export async function readHeadWithFallback(base64, where) {
-  if (where === 'cloud') return readHead(base64, 'cloud');
-  try { return await readHead(base64, 'device', 8); } catch (e) { if (!navigator.onLine) throw e; return { ...(await readHead(base64, 'cloud')), fellBack: true }; }
+export async function readHeadWithFallback(base64, where, signal) {
+  if (where === 'cloud') return readHead(base64, 'cloud', 30, signal);
+  try { return await readHead(base64, 'device', 8, signal); } catch (e) { if (signal?.aborted || !navigator.onLine) throw e; return { ...(await readHead(base64, 'cloud', 30, signal)), fellBack: true }; }
 }
 
 // Called every time the shared screen changes: dozens to hundreds of times in one meeting.
 // It has to answer within a couple of seconds, so it runs on the device.
-export async function readHead(base64, where = 'device', seconds = 30) {
-  const result = await within(reader(HEAD_SCHEMA, where).generateContent(['This is a frame from a screen shared in a video meeting. Give the title of what is shown, exactly as written, and what kind of content it is.', image(base64)]), seconds);
+export async function readHead(base64, where = 'device', seconds = 30, signal) {
+  const stop = limit(seconds, signal); let result;
+  try { result = await within(reader(HEAD_SCHEMA, where, stop.signal).generateContent(['This is a frame from a screen shared in a video meeting. Give the title of what is shown, exactly as written, and what kind of content it is.', image(base64)], { signal: stop.signal }), seconds); } finally { stop.abort(); }
   return { ...parse(result.response.text()), source: result.response.inferenceSource || (where === 'cloud' ? 'in_cloud' : 'on_device') };
 }
-export async function readLines(base64, where = 'device') {
-  const result = await within(reader(LINES_SCHEMA, where).generateContent(['This is a frame from a screen shared in a video meeting. Copy every line of text in reading order, exactly as written. Leave out the title at the top.', image(base64)]), 45);
+export async function readLines(base64, where = 'device', signal) {
+  const stop = limit(20, signal); let result;
+  try { result = await within(reader(LINES_SCHEMA, where, stop.signal).generateContent(['This is a frame from a screen shared in a video meeting. Copy every line of text in reading order, exactly as written. Leave out the title at the top.', image(base64)], { signal: stop.signal }), 20); } finally { stop.abort(); }
   return { lines: (parse(result.response.text()).lines || []).map((l) => String(l).replace(/^[\s•·▪◦\-–*]+/, '').trim()).filter(Boolean), source: result.response.inferenceSource || (where === 'cloud' ? 'in_cloud' : 'on_device') };
 }
 
@@ -74,7 +79,7 @@ const DETAIL_SCHEMA = {
     summary: { type: 'string', description: 'One or two plain sentences: what this table, chart or diagram shows and the main point a sighted viewer would take from it' },
     columns: { type: 'array', items: { type: 'string' }, description: 'Column headers of the data, first column included. For a chart, the category label followed by one header per series. Empty for a diagram' },
     rows: { type: 'array', items: { type: 'array', items: { type: 'string' } }, description: 'Data rows matching columns. For a chart without printed values, read each value from the axis and prefix it with "about". Empty for a diagram' },
-    steps: { type: 'array', items: { type: 'string' }, description: 'For a diagram or flow: each step or connection in order, following the arrows, one per entry. Empty otherwise' },
+    steps: { type: 'array', items: { type: 'string' }, description: 'For a diagram or flow: each step in order, following the arrows, one per entry, as a short plain sentence such as "If the refund is under $200, the refund is issued". Do not use arrow symbols. Empty otherwise' },
   },
   required: ['summary', 'columns', 'rows', 'steps'],
 };

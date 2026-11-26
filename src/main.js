@@ -11,7 +11,8 @@ const NEEDS_DETAIL = ['table', 'chart', 'diagram'];
 
 // Everything the app says goes into one polite live region, which a screen reader reads on its
 // own. "Speak aloud" adds the browser's speech for people who do not run a screen reader.
-function say(text, { interrupt = false } = {}) {
+function say(text, { interrupt = false, always = false } = {}) {
+  if (state.paused && !always) { (window.__said ||= []).push({ at: performance.now(), text, interrupt, muted: true }); return; }
   const live = $('#live'); if (live) { live.textContent = ''; setTimeout(() => { live.textContent = text; }, 30); }
   const shown = $('#said'); if (shown) shown.textContent = text;
   (window.__said ||= []).push({ at: performance.now(), text, interrupt });
@@ -56,12 +57,19 @@ async function begin(kind) {
   }
   let stream, sample = null;
   try {
-    if (kind === 'sample') { sample = await sampleMeeting(); stream = sample.stream; } else stream = await navigator.mediaDevices.getDisplayMedia({ video: { frameRate: 5 }, audio: false });
+    if (kind === 'sample') { sample = await sampleMeeting(); stream = sample.stream; } else {
+      // Chrome normally jumps to the tab that was just shared. Readback keeps the focus here, where
+      // the announcements are, so a screen reader goes on reading them.
+      const controller = self.CaptureController ? new CaptureController() : null;
+      stream = await navigator.mediaDevices.getDisplayMedia({ video: { frameRate: 5 }, audio: false, ...(controller ? { controller } : {}) });
+      try { controller?.setFocusBehavior('no-focus-change'); } catch { /* a window or a whole screen was chosen */ }
+    }
   } catch { say('No screen was chosen.'); return; }
   state.screens = []; state.stats = { samples: 0, device: 0, cloud: 0, keptBytes: 0, sentBytes: 0 }; state.notes = null;
   main.innerHTML = `<h1 class="sr">Following the shared screen</h1><div class="live">
     <figure class="screen" style="margin:0"><video id="video" muted playsinline aria-hidden="true"></video><figcaption>${kind === 'sample' ? 'Sample meeting. It is read through the same capture as a real shared screen.' : 'The screen you are sharing with this tab. Frames stay on this device unless a badge says "Cloud".'}</figcaption>
-      <div class="row" style="margin-top:14px"><button id="end">End and write notes</button><button id="again" class="ghost">Read this screen again</button></div>
+      <div class="row" style="margin-top:14px"><button id="end">End and write notes</button><button id="again" class="ghost">Read this screen again</button><button id="pause" class="ghost" aria-pressed="false">Pause announcements</button></div>
+      <p class="keys">Keys: Alt+P pauses or resumes announcements, Alt+R reads the current screen again, Alt+Q moves to the question box, Escape stops the voice.</p>
       <p class="saidbox" aria-hidden="true"><span>Last announcement</span><span id="said">None yet.</span></p>
       <p class="stats" id="stats"></p></figure>
     <div><section class="now" aria-labelledby="now-h"><h2 id="now-h">Current screen</h2><div id="now"><p>Waiting for the first screen.</p></div></section>
@@ -76,6 +84,9 @@ async function begin(kind) {
   state.session = { video, end };
   $('#end').onclick = end;
   $('#again').onclick = () => onChange({ kind: 'screen', frame: grab(video) });
+  // While announcements are paused, screens are still read and listed, silently.
+  state.paused = false;
+  $('#pause').onclick = () => { state.paused = !state.paused; if (state.paused) speechSynthesis?.cancel(); $('#pause').setAttribute('aria-pressed', String(state.paused)); $('#pause').textContent = state.paused ? 'Resume announcements' : 'Pause announcements'; say(state.paused ? 'Announcements paused. Screens are still being read.' : 'Announcements resumed.', { always: true, interrupt: true }); };
   $('#ask').onsubmit = (e) => { e.preventDefault(); const q = $('#q').value.trim(); if (q) { $('#q').value = ''; question(q); } };
   say(kind === 'sample' ? 'Sample meeting started.' : 'Following the shared screen.');
 }
@@ -90,7 +101,7 @@ function detailHtml(d, title) {
   return `<p style="margin-top:12px">${badge('in_cloud')}${esc(d.summary)}</p>${table}${steps}`;
 }
 const screenHtml = (s, n) => `<p class="title">${esc(s.title || 'Untitled screen')}</p><p>${badge(s.source)}Screen ${n} · ${KIND[s.kind] || 'Screen'}${s.seconds ? ` · read ${s.seconds.toFixed(1)} s after it settled` : ''}</p>
-  ${s.lines?.length ? `<ul class="lines">${s.lines.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>` : ''}${s.detailPending ? '<p class="stats">Describing the data in the cloud…</p>' : ''}${detailHtml(s.detail, s.title)}${s.error ? `<p class="err">${esc(s.error)}</p>` : ''}`;
+  ${s.lines?.length ? `<ul class="lines">${s.lines.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>` : ''}${s.detailPending ? '<p class="stats">Describing the data in the cloud…</p>' : ''}${s.note ? `<p class="stats">${esc(s.note)}</p>` : ''}${detailHtml(s.detail, s.title)}${s.error ? `<p class="err">${esc(s.error)}</p>` : ''}`;
 
 function paint() {
   const n = state.screens.length; if (!n) return;
@@ -103,12 +114,14 @@ function paint() {
 
 // One change at a time matters: if the presenter moves on while a screen is being read,
 // the rest of that reading is dropped and the new screen is read instead.
-let turn = 0;
+let turn = 0, reading = null;
 async function onChange({ kind, frame }) {
+  (window.__changes ||= []).push({ at: performance.now(), kind });
+  reading?.abort(); const ctl = reading = new AbortController(); const { signal } = ctl;
   const mine = ++turn; const t0 = performance.now(); const current = () => mine === turn;
   const prev = state.screens[state.screens.length - 1];
   try {
-    const head = await readHeadWithFallback(frame.base64, state.where); count(head.source, frame.bytes);
+    const head = await readHeadWithFallback(frame.base64, state.where, signal); count(head.source, frame.bytes);
     if (!current()) return;
     const sameScreen = kind === 'update' && prev && prev.title === head.title;
     const s = sameScreen ? prev : { title: head.title, kind: head.kind, source: head.source, lines: [], frame, seconds: (performance.now() - t0) / 1000 };
@@ -119,7 +132,13 @@ async function onChange({ kind, frame }) {
     if (wantsDetail && !(sameScreen && s.detail)) {
       s.detailPending = true; paint();
       describeDetail(frame.base64).then((d) => { s.detail = d; count('in_cloud', frame.bytes); if (current()) say(`${d.summary}${d.rows?.length ? ` The data is in a table with ${d.rows.length} rows.` : ''}${d.steps?.length ? ` ${d.steps.length} steps are listed.` : ''}`); })
-        .catch((e) => { console.error(e); s.error = 'The cloud description did not arrive. Ask a question or press "Read this screen again".'; })
+        // No connection, or the cloud did not answer: the on-device model reads the text of the
+        // screen instead, so the person still gets its contents, without the structure.
+        .catch(async (e) => {
+          console.error(e); (window.__errors ||= []).push({ at: performance.now(), turn: 'detail', error: String(e) });
+          try { const body = await readLines(frame.base64, 'device'); count(body.source, frame.bytes); s.lines = body.lines.filter((l) => l !== s.title && /\p{L}|\d/u.test(l)); s.note = 'The cloud could not be reached, so this text was read on the device, without table structure.'; if (current()) say(`The cloud could not be reached. Read on this device: ${s.lines.join('. ')}`); }
+          catch { s.error = 'The cloud description did not arrive. Ask a question or press "Read this screen again".'; }
+        })
         .finally(() => { s.detailPending = false; if ($('#now')) paint(); });
     }
     // Copying a dense table cell by cell on the device is slow, and the loose labels of a chart or
@@ -129,19 +148,19 @@ async function onChange({ kind, frame }) {
       // that sit on every screen.
       const key = (l) => l.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
       const before = new Set([...s.lines, ...(sameScreen ? [] : prev?.lines || [])].map(key));
-      const body = await readLines(frame.base64, state.where); count(body.source, frame.bytes);
+      const body = await readLines(frame.base64, state.where, signal); count(body.source, frame.bytes);
       if (!current()) return;
-      s.lines = body.lines.filter((l) => l !== s.title); paint();
+      s.lines = body.lines.filter((l) => l !== s.title && /\p{L}/u.test(l)); paint();
       const added = s.lines.filter((l) => !before.has(key(l)));
       if (added.length) say(`${sameScreen ? 'Added: ' : ''}${added.join('. ')}`);
     }
-  } catch (e) { console.error(e); if (current()) say('This screen could not be read. Press "Read this screen again".'); }
+  } catch (e) { console.error(e); (window.__errors ||= []).push({ at: performance.now(), turn: mine, error: String(e) }); if (current()) say('This screen could not be read. Press "Read this screen again".'); }
 }
 
 async function question(q) {
   const { video } = state.session; const frame = grab(video);
   const prev = state.screens.length > 1 ? state.screens[state.screens.length - 2].frame : null;
-  const block = document.createElement('div'); block.className = 'qa'; block.innerHTML = `<p class="q">${esc(q)}</p><p class="a">…</p>`; $('#answers').prepend(block);
+  const block = document.createElement('div'); block.className = 'qa'; block.innerHTML = `<p class="q">${state.screens.length ? `About screen ${state.screens.length}: ` : ''}${esc(q)}</p><p class="a">…</p>`; $('#answers').prepend(block);
   try {
     const r = await ask(q, frame.base64, prev?.base64, (text) => { block.querySelector('.a').textContent = text; });
     count(r.source, frame.bytes + (r.source === 'in_cloud' && prev ? prev.bytes : 0));
@@ -157,7 +176,7 @@ function notesFile(notes) {
 }
 
 async function finish() {
-  turn += 1; speechSynthesis?.cancel();
+  turn += 1; reading?.abort(); speechSynthesis?.cancel(); state.session = null;
   const n = state.screens.length;
   main.innerHTML = `<h1>${n} screen${n === 1 ? '' : 's'} read</h1><div id="notes"><p>${n ? 'Writing notes…' : 'No screen was read.'}</p></div>
     <div class="row" style="margin-top:16px">${n ? '<a id="save" download="meeting-screens.html"><button class="ghost">Download notes as HTML</button></a>' : ''}<button id="home">Start again</button></div>
@@ -171,9 +190,17 @@ async function finish() {
     state.notes = await writeNotes(state.screens); state.stats.cloud += 1;
     $('#notes').innerHTML = `<p>${badge('in_cloud')}${esc(state.notes.summary)}</p><h2>Key points</h2><ul class="lines">${state.notes.key_points.map((k) => `<li>${esc(k)}</li>`).join('')}</ul>`;
     link(); say(`Notes are ready. ${state.notes.summary}`);
-  } catch (e) { console.error(e); $('#notes').innerHTML = '<p class="note">The summary could not be written, but the screens below are saved in the download.</p>'; }
+  } catch (e) { console.error(e); (window.__errors ||= []).push({ at: performance.now(), turn: 'notes', error: String(e) }); $('#notes').innerHTML = '<p class="note">The summary could not be written, but the screens below are saved in the download.</p>'; }
 }
 
+addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') speechSynthesis?.cancel();
+  if (!e.altKey || !state.session || !$('#pause')) return;
+  const key = e.code.replace('Key', '').toLowerCase();
+  if (key === 'p') { e.preventDefault(); $('#pause').click(); }
+  if (key === 'r') { e.preventDefault(); $('#again').click(); }
+  if (key === 'q') { e.preventDefault(); $('#q').focus(); }
+});
 window.__readback = state;
 pill(); home();
 deviceStatus().then((s) => { state.status = s; pill(); if (!state.session) home(); if (s === 'available') warmUp().then(() => { state.warm = true; }); });
