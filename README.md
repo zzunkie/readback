@@ -7,12 +7,12 @@ Readback follows a screen shared in a video meeting and reads it to blind and lo
 
 ## What it does
 
-1. Open Readback in Chrome next to your meeting, or in the side panel of the meeting tab with the Chrome extension in `extension/`, and press "Follow a shared screen", then choose the meeting tab or window. "Play the sample meeting" runs an eight-slide presentation through the same capture path, so you can try it without a call.
+1. Open Readback in Chrome next to your meeting, or in the meeting tab's side panel using the Chrome extension. Press "Follow a shared screen" and choose the meeting tab or window. "Play the sample meeting" runs an eight-slide presentation through the same capture path, so you can try it without a call.
 2. Readback checks the shared video feed a few times a second using plain pixel comparison without calling a model. It ignores regions that never stop moving, such as a camera tile, and it does not react when the presenter only moves the pointer.
 3. Readback keeps keyboard focus on its own tab when sharing starts, so your screen reader stays where the announcements are. When the screen changes and settles, Gemini Nano reads the frame in Chrome and Readback announces its title and content type: "Screen 3. Revenue by region, in millions of dollars. Table." The announcement goes to an ARIA live region so your screen reader speaks it, or Readback can speak it aloud itself. On text screens, Gemini Nano also reads the body lines on the device.
 4. When Gemini Nano identifies a screen as a table, chart, or diagram, Readback sends that single frame to Gemini in the cloud. The cloud model returns a one-sentence summary and structured content: an HTML table with row and column headers that screen reader table commands can walk through, values read off the axis of an unlabeled chart, or the steps of a flowchart ordered along its arrows.
 5. You can type a question about the current screen at any time, such as "Which region grew the most?" or "What changed from the previous slide?" When online, Gemini in the cloud answers using both the current and previous frames. When offline, Readback falls back to Gemini Nano on the current frame and notes that the on-device model answered.
-6. Every screen stays in a list under headings, with its text and data, so you can go back while the presenter moves on. Alt+P pauses spoken announcements while someone is talking, while new screens continue to be transcribed and added to the list. Alt+R reads the current screen again, and Escape stops the voice. In the side panel, Alt+Shift+P, R, and Q do the same while the focus is in the meeting.
+6. Every screen stays in a list under headings, with its text and data, so you can go back while the presenter moves on. Alt+P pauses spoken announcements when someone is talking, though new screens are still transcribed and added to the list. Alt+R reads the current screen again, and Escape stops the voice. In the side panel, Alt+Shift+P and Alt+Shift+R work the same way while focus stays in the meeting, and Alt+Shift+Q jumps to the question box.
 7. When the meeting ends, Readback writes a short summary and exports everything that was shown as one HTML file with headings, lists, and tables.
 
 Each item on screen carries an "On device" or "Cloud" badge based on `response.inferenceSource`, and a counter shows how many reads ran on the device and how many megabytes of frames were never uploaded.
@@ -23,7 +23,7 @@ Every model call goes through the Firebase AI Logic Web SDK (`firebase/ai`). App
 
 | Step | Firebase AI Logic call | Why it runs there |
 |---|---|---|
-| Announce each new screen: title and kind of content | `InferenceMode.ONLY_ON_DEVICE`, image input, `onDeviceParams.promptOptions.responseConstraint` | It runs on every screen change for the whole meeting. The on-device announcement does not depend on the connection: on a throttled connection its median was 1.7 and 3.1 seconds in two runs, against 3.5 seconds in the cloud, and routine screens stay on the device. |
+| Announce each new screen: title and kind of content | `InferenceMode.ONLY_ON_DEVICE`, image input, `onDeviceParams.promptOptions.responseConstraint` | It runs on every screen change for the whole meeting. Routine screens stay on the device, and announcements do not depend on the connection or compete with the call for upload bandwidth: on a throttled link, on-device medians were 1.7 and 3.1 seconds across two runs (the slower one recorded while other workloads were running on the same machine), versus 3.5 seconds in the cloud. |
 | Read the body lines of a text screen | `InferenceMode.ONLY_ON_DEVICE`, image input, `onDeviceParams.promptOptions.responseConstraint` | Runs on the device so body text is ready within seconds without uploading frames. |
 | Decide whether a screen needs the cloud | The `kind` field of the on-device answer | Only tables, charts, and diagrams go to the cloud. In the sample meeting, that is 5 of 8 screens. |
 | Turn a table, chart, or diagram into data | `InferenceMode.ONLY_IN_CLOUD` on `gemini-4-hydrogen`, the larger of the two cloud models the app uses, with `responseSchema` and `thinkingConfig` | On our test set, the on-device model answered 45 and 53 of 91 questions about dense tables, unlabeled charts, and flowcharts in two runs, while this model answered 90 and 91. |
@@ -38,7 +38,7 @@ The on-device call and the cloud fallback share one JSON schema: the cloud takes
 
 The reader and line prompts tell the model to leave out the meeting app's own text, such as participant names, "is presenting" labels, and clocks.
 
-The app is plain JavaScript with Vite, hosted on Firebase Hosting. The Chrome extension is a side panel that shows the same hosted app, so every model call still goes through the same Firebase project and App Check, and it passes its keyboard commands to the app.
+The app is plain JavaScript with Vite, hosted on Firebase Hosting. The Chrome extension loads the same hosted app in Chrome's side panel and forwards keyboard shortcuts to it, so every model call still goes through the same Firebase project and App Check.
 
 ## Results on the test set
 
@@ -53,13 +53,15 @@ We built 86 test slides at 1280 by 720 with JPEG compression similar to a shared
 | Time from the screen appearing to the announcement, median | 2.6 s, 1.6 s, 1.6 s, 2.8 s | 2.7 s, 2.7 s |
 | Frames uploaded | 0 | 86 (3.3 MB) |
 
-About one second of the time to announcement is spent waiting for the frame to settle, and the rest is model inference. Gemini Nano's inference took a median of 0.6 seconds in the two fast runs and 1.7 to 1.8 seconds in the other two; the last run was measured while other work was loading the same machine. The titles Gemini Nano missed in the first run were two section slides where it included the subtitle and one where it changed "Fulfilment" to "Fulfillment".
+About one second of the time to announcement is spent waiting for the frame to settle, and the rest is model inference. Gemini Nano's inference took a median of 0.6 seconds in two runs and 1.7 to 1.8 seconds in the other two (including a fourth run recorded while other workloads were running on the same machine), keeping total announcement time close to the cloud's 2.7-second median even under local load. The titles Gemini Nano missed in the first run were two section slides where it included the subtitle and one where it changed "Fulfilment" to "Fulfillment".
 
 | First 30 screens on a throttled connection (600 kbit/s up, 1.5 Mbit/s down, 300 ms delay) | Gemini Nano on the device (two runs) | `gemini-3.5-flash-lite` in the cloud reading every screen |
 |---|---|---|
 | Screens announced | 30 of 30, 30 of 30 | 30 of 30 |
 | Time to the announcement, median | 1.7 s, 3.1 s | 3.5 s |
 | Time to the announcement, 90th percentile | 2.4 s, 3.6 s | 4.1 s |
+
+The 3.1-second on-device median was recorded under the same local load as the fourth run above.
 
 We also captured 43 real web screens at 1280 by 720 and played them the same way: 10 Wikipedia tables, 9 source files and 8 CSV files on GitHub, 8 MDN articles, and 8 Our World in Data charts. `tools/capture-real.mjs` saves each page with an answer key taken from its own DOM.
 
