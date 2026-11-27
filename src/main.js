@@ -69,9 +69,9 @@ async function begin(kind) {
   main.innerHTML = `<h1 class="sr">Following the shared screen</h1><div class="live">
     <figure class="screen" style="margin:0"><video id="video" muted playsinline aria-hidden="true"></video><figcaption>${kind === 'sample' ? 'Sample meeting. It is read through the same capture as a real shared screen.' : 'The screen you are sharing with this tab. Frames stay on this device unless a badge says "Cloud".'}</figcaption>
       <div class="row" style="margin-top:14px"><button id="end">End and write notes</button><button id="again" class="ghost">Read this screen again</button><button id="pause" class="ghost" aria-pressed="false">Pause announcements</button></div>
-      <p class="keys">Shortcuts: Alt+P pauses or resumes announcements; Alt+R reads this screen again; Alt+Q moves focus to the question box; Escape stops speech.</p>
       <p class="saidbox" aria-hidden="true"><span>Last announcement</span><span id="said">None yet.</span></p>
-      <p class="stats" id="stats"></p></figure>
+      <p class="stats" id="stats"></p>
+      <p class="keys">Shortcuts: Alt+P pauses or resumes announcements; Alt+R reads this screen again; Alt+Q moves focus to the question box; Escape stops speech.</p></figure>
     <div><section class="now" aria-labelledby="now-h"><h2 id="now-h">Current screen</h2><div id="now"><p>Waiting for the first screen.</p></div></section>
       <section aria-labelledby="ask-h"><h2 id="ask-h">Ask about the current screen</h2>
         <form class="ask" id="ask"><label class="sr" for="q">Your question</label><input id="q" autocomplete="off" placeholder="Which region grew the most?"><button>Ask</button></form><div id="answers"></div></section>
@@ -200,6 +200,14 @@ addEventListener('keydown', (e) => {
   if (key === 'p') { e.preventDefault(); $('#pause').click(); }
   if (key === 'r') { e.preventDefault(); $('#again').click(); }
   if (key === 'q') { e.preventDefault(); $('#q').focus(); }
+});
+// Inside the Chrome extension's side panel, the extension passes on its shortcuts (Alt+Shift+P, R, Q),
+// which work while the focus is in the meeting tab.
+if (new URLSearchParams(location.search).has('panel')) document.documentElement.classList.add('panel');
+addEventListener('message', (e) => {
+  if (!e.origin.startsWith('chrome-extension://') || !state.session || !$('#pause')) return;
+  const run = { pause: () => $('#pause').click(), again: () => $('#again').click(), ask: () => $('#q').focus() }[e.data?.readback];
+  if (run) run();
 });
 window.__readback = state;
 pill(); home();

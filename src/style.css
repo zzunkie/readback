@@ -39,3 +39,4 @@ button[aria-pressed="true"] { background:var(--warn-bg); border-color:var(--warn
   button { background:#f3f4f6; color:#111318; border-color:#f3f4f6; } button.ghost { background:transparent; color:var(--ink); border-color:#9ca3af; }
   .ask input { background:#0b0d11; color:var(--ink); } .saidbox { background:#2a2110; } .err { color:#fca5a5; }
 }
+.panel main { padding:14px 14px 60px; } .panel .top { padding:10px 14px; } .panel h1 { font-size:24px; } .panel .screen { position:static; } .panel .title { font-size:21px; }

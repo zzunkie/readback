@@ -62,12 +62,12 @@ export async function readHeadWithFallback(base64, where, signal) {
 // It has to answer within a couple of seconds, so it runs on the device.
 export async function readHead(base64, where = 'device', seconds = 30, signal) {
   const stop = limit(seconds, signal); let result;
-  try { result = await within(reader(HEAD_SCHEMA, where, stop.signal).generateContent(['This is a frame from a screen shared in a video meeting. Give the title of what is shown, exactly as written, and what kind of content it is.', image(base64)], { signal: stop.signal }), seconds); } finally { stop.abort(); }
+  try { result = await within(reader(HEAD_SCHEMA, where, stop.signal).generateContent(['This is a frame from a screen shared in a video meeting. It may show the meeting app around the shared content. Give the title of the shared slide, document or page, exactly as written, and what kind of content it is.', image(base64)], { signal: stop.signal }), seconds); } finally { stop.abort(); }
   return { ...parse(result.response.text()), source: result.response.inferenceSource || (where === 'cloud' ? 'in_cloud' : 'on_device') };
 }
 export async function readLines(base64, where = 'device', signal) {
   const stop = limit(20, signal); let result;
-  try { result = await within(reader(LINES_SCHEMA, where, stop.signal).generateContent(['This is a frame from a screen shared in a video meeting. Copy every line of text in reading order, exactly as written. Leave out the title at the top.', image(base64)], { signal: stop.signal }), 20); } finally { stop.abort(); }
+  try { result = await within(reader(LINES_SCHEMA, where, stop.signal).generateContent(['This is a frame from a screen shared in a video meeting. It may show the meeting app around the shared content. Copy every line of text of the shared slide, document or page in reading order, exactly as written. Leave out the title at the top, and leave out the meeting app itself: participant names, "is presenting" labels, the meeting name, clocks and buttons.', image(base64)], { signal: stop.signal }), 20); } finally { stop.abort(); }
   return { lines: (parse(result.response.text()).lines || []).map((l) => String(l).replace(/^[\s•·▪◦\-–*]+/, '').trim()).filter(Boolean), source: result.response.inferenceSource || (where === 'cloud' ? 'in_cloud' : 'on_device') };
 }
 

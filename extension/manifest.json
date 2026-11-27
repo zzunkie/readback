@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Readback",
+  "version": "0.1.0",
+  "description": "Reads the screen shared in this tab's meeting to blind and low-vision participants, in a side panel next to the call.",
+  "permissions": ["sidePanel", "tabCapture", "activeTab"],
+  "action": { "default_title": "Open Readback next to this tab" },
+  "side_panel": { "default_path": "panel.html" },
+  "background": { "service_worker": "background.js" },
+  "commands": {
+    "pause": { "suggested_key": { "default": "Alt+Shift+P" }, "description": "Pause or resume announcements" },
+    "again": { "suggested_key": { "default": "Alt+Shift+R" }, "description": "Read the current screen again" },
+    "ask": { "suggested_key": { "default": "Alt+Shift+Q" }, "description": "Move to the question box" }
+  }
+}

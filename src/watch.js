@@ -1,11 +1,11 @@
 // Watches a shared-screen video stream and reports when the picture has changed and settled.
 // No model is involved: this is pixel arithmetic on a small grayscale copy of each frame.
 
-const W = 96, H = 54;           // size of the comparison copy
+const W = 192, H = 108;          // size of the comparison copy
 const STEP = 350;               // milliseconds between samples
 const CELL_DIFF = 22;           // a pixel counts as changed when its brightness moved this much (0-255)
 const STILL = 0.004;            // share of changed pixels between two samples that still counts as "not moving"
-const CHANGED = 0.008;          // share of changed pixels against the last reported frame that counts as new content
+const CHANGED = 0.002;          // share of changed pixels against the last reported frame that counts as new content
 const NEW_SCREEN = 0.3;         // above this share it is a new screen, below it an update to the same screen
 
 export function watch(video, { onChange, onSample = () => {} }) {
